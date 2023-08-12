@@ -1,3 +1,5 @@
+TextureRect
+HBoxContainer
 RichTextLabel
 Label
 VBoxContainer
@@ -6,8 +8,6 @@ GridContainer
 FlowContainer
 Panel
 Control
-TextureRect
-HBoxContainer
 ColorRect
 Button
 ProgressBar

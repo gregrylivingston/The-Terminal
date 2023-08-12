@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://20cmqn7jwsoq"]
+[gd_scene load_steps=4 format=3 uid="uid://20cmqn7jwsoq"]
 
 [ext_resource type="Script" path="res://script/scenarioGenerator.gd" id="1_b8d3n"]
+[ext_resource type="Texture2D" uid="uid://bewgwcjw2lptf" path="res://texture/icon/Icon_BASE.png" id="2_8ep4c"]
+[ext_resource type="PackedScene" uid="uid://bwoiqnp6pp5rd" path="res://scene/button_s.tscn" id="3_wrawm"]
 
 [node name="scenarioGenerator" type="Panel"]
 self_modulate = Color(0, 0, 0, 1)
@@ -28,18 +30,114 @@ theme_override_constants/h_separation = 50
 theme_override_constants/v_separation = 50
 columns = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="summary" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 217.0
 offset_top = 165.0
 offset_right = 1333.0
 offset_bottom = 697.0
 
-[node name="Label" type="RichTextLabel" parent="VBoxContainer"]
+[node name="Label_FacilityName" type="RichTextLabel" parent="summary"]
 layout_mode = 2
-theme_override_font_sizes/italics_font_size = 30
+theme_override_font_sizes/italics_font_size = 36
 bbcode_enabled = true
 text = "[i]FACILITYNAME[/i]"
 fit_content = true
 scroll_active = false
 text_direction = 2
+
+[node name="HBox1" type="HBoxContainer" parent="summary"]
+layout_mode = 2
+
+[node name="Label_FacilityType" type="RichTextLabel" parent="summary/HBox1"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 26
+theme_override_font_sizes/italics_font_size = 30
+bbcode_enabled = true
+text = "FACILITYNAME"
+fit_content = true
+scroll_active = false
+text_direction = 2
+
+[node name="Icon_FacilityType" type="TextureRect" parent="summary/HBox1"]
+custom_minimum_size = Vector2(26, 26)
+layout_mode = 2
+size_flags_horizontal = 8
+texture = ExtResource("2_8ep4c")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="HBox2" type="HBoxContainer" parent="summary"]
+layout_mode = 2
+
+[node name="Label" type="RichTextLabel" parent="summary/HBox2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 26
+theme_override_font_sizes/italics_font_size = 30
+bbcode_enabled = true
+text = "FACILITYNAME"
+fit_content = true
+scroll_active = false
+text_direction = 2
+
+[node name="Icon" type="TextureRect" parent="summary/HBox2"]
+custom_minimum_size = Vector2(26, 26)
+layout_mode = 2
+size_flags_horizontal = 8
+texture = ExtResource("2_8ep4c")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="HBox3" type="HBoxContainer" parent="summary"]
+layout_mode = 2
+
+[node name="Label" type="RichTextLabel" parent="summary/HBox3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 26
+theme_override_font_sizes/italics_font_size = 30
+bbcode_enabled = true
+text = "FACILITYNAME"
+fit_content = true
+scroll_active = false
+text_direction = 2
+
+[node name="Icon" type="TextureRect" parent="summary/HBox3"]
+custom_minimum_size = Vector2(26, 26)
+layout_mode = 2
+size_flags_horizontal = 8
+texture = ExtResource("2_8ep4c")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="HBox4" type="HBoxContainer" parent="summary"]
+layout_mode = 2
+
+[node name="Label" type="RichTextLabel" parent="summary/HBox4"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 26
+theme_override_font_sizes/italics_font_size = 30
+bbcode_enabled = true
+text = "FACILITYNAME"
+fit_content = true
+scroll_active = false
+text_direction = 2
+
+[node name="Icon" type="TextureRect" parent="summary/HBox4"]
+custom_minimum_size = Vector2(26, 26)
+layout_mode = 2
+size_flags_horizontal = 8
+texture = ExtResource("2_8ep4c")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Button_S" parent="summary" instance=ExtResource("3_wrawm")]
+custom_minimum_size = Vector2(200, 35)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 10
+myLabel = "BEGIN"
+myColor = 11
