@@ -1,6 +1,11 @@
 extends Panel
 
 var scenarioChoiceButton = preload("res://scene/scenarioChoiceButton.tscn")
+var colorMap = {
+	"SHIP":7,"STATION":12,"BASE":4,
+	"EARTH_SYSTEM":12,"SOLAR_SYSTEM":6,"DISTANT_STAR":6,"ANOTHER_DIMENSION":0,
+	"EXPLORATION":14,"TRADE":11,"SCIENCE":12,"MILITARY":0,"EXTRACTION":4,"TOURISM":9,
+}
 
 func beginGame():
 	get_tree().change_scene_to_file("res://scene/terminal.tscn")
@@ -42,13 +47,13 @@ func saveFacilitySize(choice):
 func loadProposedScenario():
 	$summary.visible = true
 	$summary/Label_FacilityName.text = "[i]" + shipNames[gFacility.myType][gScenario.myScenarioType][0] + "[/i]"
-	$summary/HBox1/Label_FacilityType.text = gFacility.myType
+	$summary/HBox1/Label_FacilityType.text = gFacility.myType.replace("_"," ")
 	$summary/HBox1/Icon_FacilityType.texture = load("res://texture/icon/Icon_"+gFacility.myType+".png")
-	$summary/HBox2/Label.text = gScenario.myScenarioLocation
+	$summary/HBox2/Label.text = gScenario.myScenarioLocation.replace("_"," ")
 	$summary/HBox2/Icon.texture = load("res://texture/icon/Icon_"+gScenario.myScenarioLocation+".png")
-	$summary/HBox3/Label.text = gScenario.myScenarioType
+	$summary/HBox3/Label.text = gScenario.myScenarioType.replace("_"," ")
 	$summary/HBox3/Icon.texture = load("res://texture/icon/Icon_"+gScenario.myScenarioType+".png")
-	$summary/HBox4/Label.text = gFacility.myFacilitySize
+	$summary/HBox4/Label.text = gFacility.myFacilitySize.replace("_"," ")
 	$summary/HBox4/Icon.texture = load("res://texture/icon/Icon_"+gFacility.myFacilitySize+".png")
 
 
@@ -56,6 +61,9 @@ func createScenarioButton(title, texture):
 	var newButton = scenarioChoiceButton.instantiate()
 	newButton.get_node("Button_S").myLabel = str(title).replace("_"," ")
 	newButton.get_node("TextureRect").texture = load(texture)
+	if colorMap.has(title):
+		newButton.get_node("Button_S").myColor = colorMap[title]
+		newButton.get_node("TextureRect").modulate = G.colors.find_key(colorMap[title])
 	$GridContainer.add_child(newButton)
 	return newButton
 
