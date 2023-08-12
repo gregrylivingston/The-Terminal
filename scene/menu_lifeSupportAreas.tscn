@@ -1,0 +1,92 @@
+[gd_scene load_steps=2 format=3 uid="uid://xka2thgerv0d"]
+
+[ext_resource type="PackedScene" uid="uid://4aoufsu62u03" path="res://scene/menu_lifeSupportAreaSummary.tscn" id="1_8nrr6"]
+
+[node name="Control" type="HBoxContainer"]
+offset_right = 308.0
+offset_bottom = 206.0
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "TEMP"
+horizontal_alignment = 2
+
+[node name="Label3" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "ATM"
+horizontal_alignment = 2
+
+[node name="Label4" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "OXY"
+horizontal_alignment = 2
+
+[node name="Label5" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "HZD"
+horizontal_alignment = 2
+
+[node name="Label6" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "PPL"
+horizontal_alignment = 2
+
+[node name="Label7" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "STS"
+horizontal_alignment = 2
+
+[node name="lifeSupportArea" parent="." instance=ExtResource("1_8nrr6")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 12
+text = "<="
+horizontal_alignment = 1
+
+[node name="lifeSupportArea2" parent="." instance=ExtResource("1_8nrr6")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 12
+text = "="
+horizontal_alignment = 1
+
+[node name="lifeSupportArea3" parent="." instance=ExtResource("1_8nrr6")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 12
+text = "x"
+horizontal_alignment = 1
+
+[node name="lifeSupportArea4" parent="." instance=ExtResource("1_8nrr6")]
+layout_mode = 2
+size_flags_horizontal = 3

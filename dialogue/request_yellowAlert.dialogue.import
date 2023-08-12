@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://c65yxb0rfk151"
+path="res://.godot/imported/request_yellowAlert.dialogue-779c17ec04a646ad8a6e44a0f55f5298.tres"
+
+[deps]
+
+source_file="res://dialogue/request_yellowAlert.dialogue"
+dest_files=["res://.godot/imported/request_yellowAlert.dialogue-779c17ec04a646ad8a6e44a0f55f5298.tres"]
+
+[params]
+
+defaults=true

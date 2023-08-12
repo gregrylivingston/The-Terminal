@@ -1,0 +1,7 @@
+res://scene/menu_lifeSupportAreaSummary.tscn
+res://scene/terminal.tscn
+res://scene/tank.tscn
+res://scene/system_oxygen.tscn
+res://scene/button_s.tscn
+res://addons/dialogue_manager/example_balloon/example_balloon.tscn
+res://scene/menu_lifeSupportAreas.tscn

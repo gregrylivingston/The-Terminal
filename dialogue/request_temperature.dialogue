@@ -1,0 +1,15 @@
+~ REQUEST
+
+Nathan: [[Computer|Aiden|AI]], [[It's a little warm in here.|I'm feeling hot.|Is it just me or is it getting hot in here.|]]
+Nathan: Please lower the temperature by 2 degrees.
+- Comfirmed. 
+	[i]Set the temperature in the Library to 21C.[i]
+	=> END
+	#Nathan: You picked the first one.
+- Setting Library temperature to 21C.  [i]Set the temperature in the Library to 21C.[i]
+	=> END
+- Sorry, you do not have permission to change the temperature. => END
+- Are you feeling ok?  Your biomarkers indicate a doctors visit may be in order. Please make your way to the medical bay and I will inform the doctor.
+
+
+=> END

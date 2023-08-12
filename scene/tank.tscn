@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=3 uid="uid://80n71s3fle7"]
+
+[ext_resource type="Script" path="res://script/tank.gd" id="1_ivbf6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_joglc"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w0mat"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="Tank" type="Button"]
+custom_minimum_size = Vector2(30, 50)
+offset_right = 66.0
+offset_bottom = 139.0
+script = ExtResource("1_ivbf6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer"]
+custom_minimum_size = Vector2(30, 50)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_joglc")
+theme_override_styles/fill = SubResource("StyleBoxFlat_w0mat")
+value = 60.0
+fill_mode = 3
+show_percentage = false
+
+[node name="Hbox1" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/Hbox1"]
+layout_mode = 2
+text = "45%"
+
+[node name="Label2" type="Label" parent="VBoxContainer/Hbox1"]
+layout_mode = 2
+text = "OK"
+
+[node name="Hbox2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/Hbox2"]
+layout_mode = 2
+text = "+.02"
+
+[node name="Label2" type="Label" parent="VBoxContainer/Hbox2"]
+layout_mode = 2
+text = "-.02"

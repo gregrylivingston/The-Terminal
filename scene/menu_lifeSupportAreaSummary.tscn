@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://4aoufsu62u03"]
+
+[node name="lifeSupportArea" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="name" type="Label" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "B"
+horizontal_alignment = 2
+
+[node name="temp" type="Label" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "22"
+horizontal_alignment = 2
+
+[node name="atm" type="Label" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "0.3"
+horizontal_alignment = 2
+
+[node name="oxy" type="Label" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "OK"
+horizontal_alignment = 2
+
+[node name="hzd" type="Label" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "OK"
+horizontal_alignment = 2
+
+[node name="ppl" type="Label" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "7"
+horizontal_alignment = 2
+
+[node name="stt" type="Label" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "OK"
+horizontal_alignment = 2

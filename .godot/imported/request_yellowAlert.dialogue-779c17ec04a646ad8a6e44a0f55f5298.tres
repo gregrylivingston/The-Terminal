@@ -1,0 +1,66 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_xpe8c"]
+
+[resource]
+script = ExtResource("1_xpe8c")
+titles = {
+"this_is_a_node_title": "3"
+}
+character_names = PackedStringArray("Officer Piskins")
+first_title = "3"
+lines = {
+"1": {
+"next_id": "3",
+"text": "this_is_a_node_title",
+"type": "title"
+},
+"3": {
+"character": "Officer Piskins",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "4",
+"text": "[[Computer|AI|Aiden]], there seems to be a fight in the gallery.  Can you bring us to yellow alert.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[Computer|AI|Aiden]], there seems to be a fight in the gallery.  Can you bring us to yellow alert.",
+"type": "dialogue"
+},
+"4": {
+"next_id": "9",
+"next_id_after": "9",
+"responses": PackedStringArray("4", "5", "6", "7"),
+"text": "Confirmed.  Yellow alert activated.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Confirmed.  Yellow alert activated.",
+"type": "response"
+},
+"5": {
+"next_id": "9",
+"next_id_after": "9",
+"text": "I have informed the captain, please stand by.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I have informed the captain, please stand by.",
+"type": "response"
+},
+"6": {
+"next_id": "9",
+"next_id_after": "9",
+"text": "Unauthorized.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Unauthorized.",
+"type": "response"
+},
+"7": {
+"next_id": "9",
+"next_id_after": "9",
+"text": "I share your concern but the correct procedure is to inform the Captian or the security officer on watch, Officer Warrens.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I share your concern but the correct procedure is to inform the Captian or the security officer on watch, Officer Warrens.",
+"type": "response"
+},
+"9": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+}
+}
+metadata/dialogue_manager_version = "2.17.0"

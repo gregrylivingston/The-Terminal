@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://bwoiqnp6pp5rd"]
+
+[ext_resource type="StyleBox" uid="uid://c2qygwuwhseie" path="res://style/button/SBFlat_White.tres" id="1_dl7qy"]
+[ext_resource type="StyleBox" uid="uid://cwn0qbqluq4pl" path="res://style/button/SBFlat_White_Hover.tres" id="2_2nr2j"]
+[ext_resource type="StyleBox" uid="uid://b8cfxqyixdpxl" path="res://style/button/SBFlat_White_Pressed.tres" id="3_4ifir"]
+[ext_resource type="Script" path="res://script/button_s.gd" id="4_07u12"]
+[ext_resource type="AudioStream" uid="uid://dqa4felyw5nfy" path="res://sound/Cursor Rollover 1.wav" id="5_pxinx"]
+
+[node name="Button_S" type="Button"]
+custom_minimum_size = Vector2(120, 40)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("1_dl7qy")
+theme_override_styles/hover = ExtResource("2_2nr2j")
+theme_override_styles/pressed = ExtResource("3_4ifir")
+text = "
+"
+alignment = 2
+script = ExtResource("4_07u12")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -6.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_pxinx")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dhselww8d3anq"
+path="res://.godot/imported/Laser Sound 3 VOL Up.mp3-a90dc3ed61694496071e521960be8e62.mp3str"
+
+[deps]
+
+source_file="res://sound/Laser Sound 3 VOL Up.mp3"
+dest_files=["res://.godot/imported/Laser Sound 3 VOL Up.mp3-a90dc3ed61694496071e521960be8e62.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

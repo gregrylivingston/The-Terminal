@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dr0yqkj2qutcj"
+path="res://.godot/imported/Triplet Accept Button.wav-a5b4db12f8705c7df0e7f63f4ab08095.sample"
+
+[deps]
+
+source_file="res://sound/Triplet Accept Button.wav"
+dest_files=["res://.godot/imported/Triplet Accept Button.wav-a5b4db12f8705c7df0e7f63f4ab08095.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

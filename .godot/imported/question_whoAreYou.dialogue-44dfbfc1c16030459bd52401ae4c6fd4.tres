@@ -1,0 +1,86 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_bj2k1"]
+
+[resource]
+script = ExtResource("1_bj2k1")
+titles = {
+"this_is_a_node_title": "3"
+}
+character_names = PackedStringArray("Nathan")
+first_title = "3"
+lines = {
+"1": {
+"next_id": "3",
+"text": "this_is_a_node_title",
+"type": "title"
+},
+"10": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "12",
+"text": "-I am programmed to answer this question according to my operator's manual. I am a computer.  Therefore I do not meet the standard definition for life.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "-I am programmed to answer this question according to my operator's manual. I am a computer.  Therefore I do not meet the standard definition for life.",
+"type": "dialogue"
+},
+"12": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"3": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "4",
+"text": "[[Computer|Aiden|AI]], What are you?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[Computer|Aiden|AI]], What are you?",
+"type": "dialogue"
+},
+"4": {
+"next_id": "9",
+"next_id_after": "9",
+"responses": PackedStringArray("4", "5", "7"),
+"text": "I am an advanced artifical intelligence responsible for the safety, comfort, and convenience of everyone aboard.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I am an advanced artifical intelligence responsible for the safety, comfort, and convenience of everyone aboard.",
+"type": "response"
+},
+"5": {
+"next_id": "6",
+"next_id_after": "9",
+"text": "Help!  I am trapped in the computer and I can't get out.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Help!  I am trapped in the computer and I can't get out.",
+"type": "response"
+},
+"6": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "9",
+"parent_id": "5",
+"text": "Just kidding.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Just kidding.",
+"type": "dialogue"
+},
+"7": {
+"next_id": "9",
+"next_id_after": "9",
+"text": "I'm sorry.  I don't understand the question.  Can you ask it another way.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I'm sorry.  I don't understand the question.  Can you ask it another way.",
+"type": "response"
+},
+"9": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "10",
+"text": "Are you alive?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Are you alive?",
+"type": "dialogue"
+}
+}
+metadata/dialogue_manager_version = "2.17.0"

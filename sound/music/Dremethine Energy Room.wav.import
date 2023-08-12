@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bchyt84p5m7xt"
+path="res://.godot/imported/Dremethine Energy Room.wav-9df83d15a013b939d50ee1e71b1fcb1a.sample"
+
+[deps]
+
+source_file="res://sound/music/Dremethine Energy Room.wav"
+dest_files=["res://.godot/imported/Dremethine Energy Room.wav-9df83d15a013b939d50ee1e71b1fcb1a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

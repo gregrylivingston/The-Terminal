@@ -1,0 +1,10 @@
+Label
+VBoxContainer
+HBoxContainer
+Panel
+RichTextLabel
+ColorRect
+Button
+ProgressBar
+Line2D
+AudioStreamPlayer

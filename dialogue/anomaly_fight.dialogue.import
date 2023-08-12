@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://dkps25d2gjvb1"
+path="res://.godot/imported/anomaly_fight.dialogue-a7adcc825be0be7c8e841068ced15718.tres"
+
+[deps]
+
+source_file="res://dialogue/anomaly_fight.dialogue"
+dest_files=["res://.godot/imported/anomaly_fight.dialogue-a7adcc825be0be7c8e841068ced15718.tres"]
+
+[params]
+
+defaults=true
