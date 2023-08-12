@@ -21,6 +21,8 @@ G="*res://script/g.gd"
 Names="*res://script/global/names.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 gAlert="*res://script/global/gAlert.gd"
+gFacility="*res://script/global/gFacility.gd"
+gScenario="*res://script/global/gScenario.gd"
 
 [display]
 

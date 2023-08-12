@@ -4,9 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://bwoiqnp6pp5rd" path="res://scene/button_s.tscn" id="1_wojqa"]
 
 [node name="Control" type="VBoxContainer"]
-offset_right = 256.0
-offset_bottom = 316.0
+offset_right = 257.0
+offset_bottom = 307.0
 size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 2
@@ -20,5 +21,5 @@ layout_mode = 2
 
 [node name="Button_S" parent="." instance=ExtResource("1_wojqa")]
 layout_mode = 2
-size_flags_vertical = 10
+size_flags_vertical = 2
 myLabel = "scenarioChoiceButton"

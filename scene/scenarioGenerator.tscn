@@ -18,12 +18,28 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -565.0
-offset_top = -270.0
-offset_right = 572.0
-offset_bottom = 298.0
+offset_left = -478.0
+offset_top = -211.0
+offset_right = 473.0
+offset_bottom = 172.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/h_separation = 25
-theme_override_constants/v_separation = 25
+theme_override_constants/h_separation = 50
+theme_override_constants/v_separation = 50
 columns = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 217.0
+offset_top = 165.0
+offset_right = 1333.0
+offset_bottom = 697.0
+
+[node name="Label" type="RichTextLabel" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/italics_font_size = 30
+bbcode_enabled = true
+text = "[i]FACILITYNAME[/i]"
+fit_content = true
+scroll_active = false
+text_direction = 2

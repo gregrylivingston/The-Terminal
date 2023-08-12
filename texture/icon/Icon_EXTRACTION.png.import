@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bewgwcjw2lptf"
-path="res://.godot/imported/Icon_PlanetStation.png-bb2beda4dd9c343c6a826fdb6e1c5f70.ctex"
+uid="uid://qw1dowmxevck"
+path="res://.godot/imported/Icon_EXTRACTION.png-d317870f74c5ccc90b6c99baa3152762.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://texture/icon/Icon_PlanetStation.png"
-dest_files=["res://.godot/imported/Icon_PlanetStation.png-bb2beda4dd9c343c6a826fdb6e1c5f70.ctex"]
+source_file="res://texture/icon/Icon_EXTRACTION.png"
+dest_files=["res://.godot/imported/Icon_EXTRACTION.png-d317870f74c5ccc90b6c99baa3152762.ctex"]
 
 [params]
 

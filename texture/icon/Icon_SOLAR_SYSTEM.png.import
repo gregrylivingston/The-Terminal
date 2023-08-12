@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbvn2iuo5u5px"
-path="res://.godot/imported/Icon_SpaceStation.png-74ed3dc50bc3ef048fda0b8591e165e0.ctex"
+uid="uid://cvdxpyn7u4muc"
+path="res://.godot/imported/Icon_SOLAR_SYSTEM.png-3e134d9c9c88322604b866cf2260a285.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://texture/icon/Icon_SpaceStation.png"
-dest_files=["res://.godot/imported/Icon_SpaceStation.png-74ed3dc50bc3ef048fda0b8591e165e0.ctex"]
+source_file="res://texture/icon/Icon_SOLAR_SYSTEM.png"
+dest_files=["res://.godot/imported/Icon_SOLAR_SYSTEM.png-3e134d9c9c88322604b866cf2260a285.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c63v38ro82uon"
-path="res://.godot/imported/icon_rocket.png-0ec4ff82d6505afd41ec48bcec5345c0.ctex"
+uid="uid://cn24gys4gw5lo"
+path="res://.godot/imported/Icon_TOURISM.png-9b28eda68faef993bdfa5539b9aaa463.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://texture/icon/icon_rocket.png"
-dest_files=["res://.godot/imported/icon_rocket.png-0ec4ff82d6505afd41ec48bcec5345c0.ctex"]
+source_file="res://texture/icon/Icon_TOURISM.png"
+dest_files=["res://.godot/imported/Icon_TOURISM.png-9b28eda68faef993bdfa5539b9aaa463.ctex"]
 
 [params]
 

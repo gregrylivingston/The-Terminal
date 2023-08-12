@@ -1,13 +1,13 @@
+RichTextLabel
+Label
+VBoxContainer
 HSeparator
 GridContainer
 FlowContainer
 Panel
 Control
 TextureRect
-VBoxContainer
-Label
 HBoxContainer
-RichTextLabel
 ColorRect
 Button
 ProgressBar

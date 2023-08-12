@@ -12,3 +12,5 @@ res://scenarioChoiceButton.tscn
 res://scene/scenarioGenerator.tscn
 res://script/scenarioGenerator.gd
 res://scene/scenarioChoiceButton.tscn
+res://script/global/gFacility.gd
+res://script/global/gScenario.gd
