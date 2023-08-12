@@ -7,7 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://dqa4felyw5nfy" path="res://sound/Cursor Rollover 1.wav" id="5_pxinx"]
 
 [node name="Button_S" type="Button"]
-custom_minimum_size = Vector2(120, 30)
+custom_minimum_size = Vector2(120, 35)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
@@ -31,6 +31,7 @@ offset_bottom = -3.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
 horizontal_alignment = 2
 vertical_alignment = 2
 

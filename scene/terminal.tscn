@@ -84,53 +84,6 @@ offset_top = 19.0
 offset_right = 348.0
 offset_bottom = 586.0
 
-[node name="Button_S7" parent="Panel/alertVbox" instance=ExtResource("3_3rfnk")]
-layout_mode = 2
-myLabel = "CAPTAIN OVERRIDE COMMAND"
-
-[node name="Button_S4" parent="Panel/alertVbox" instance=ExtResource("3_3rfnk")]
-layout_mode = 2
-myLabel = "SENSOR ALERT"
-
-[node name="Button_S8" parent="Panel/alertVbox" instance=ExtResource("3_3rfnk")]
-layout_mode = 2
-myLabel = "BIOSENSOR ALERT"
-
-[node name="Button_S9" parent="Panel/alertVbox" instance=ExtResource("3_3rfnk")]
-layout_mode = 2
-myLabel = "SENSOR WARNING"
-myColor = 4
-
-[node name="Button_S10" parent="Panel/alertVbox" instance=ExtResource("3_3rfnk")]
-layout_mode = 2
-myLabel = "BIOSENSOR WARNING"
-myColor = 4
-
-[node name="Button_S5" parent="Panel/alertVbox" instance=ExtResource("3_3rfnk")]
-layout_mode = 2
-myLabel = "CAPTAIN REQUEST"
-myColor = 15
-
-[node name="Button_S6" parent="Panel/alertVbox" instance=ExtResource("3_3rfnk")]
-layout_mode = 2
-myLabel = "OFFICER REQUEST"
-myColor = 15
-
-[node name="Button_S3" parent="Panel/alertVbox" instance=ExtResource("3_3rfnk")]
-layout_mode = 2
-myLabel = "SENSOR ANOMALY"
-myColor = 8
-
-[node name="Button_S" parent="Panel/alertVbox" instance=ExtResource("3_3rfnk")]
-layout_mode = 2
-myLabel = "PASSENGER QUESTION"
-myColor = 13
-
-[node name="Button_S2" parent="Panel/alertVbox" instance=ExtResource("3_3rfnk")]
-layout_mode = 2
-myLabel = "PASSENGER REQUEST"
-myColor = 13
-
 [node name="Panel3" type="Panel" parent="."]
 layout_mode = 2
 offset_left = -95.0
@@ -180,7 +133,7 @@ autoplay = true
 [node name="VBoxContainer3" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 7.0
-offset_top = 49.0
+offset_top = 34.0
 offset_right = 295.0
 offset_bottom = 244.0
 
@@ -189,7 +142,7 @@ layout_mode = 2
 size_flags_vertical = 0
 
 [node name="Button_Officers" parent="VBoxContainer3/HBoxContainer" instance=ExtResource("3_3rfnk")]
-custom_minimum_size = Vector2(80, 30)
+custom_minimum_size = Vector2(80, 35)
 layout_mode = 2
 size_flags_horizontal = 3
 text = ""
@@ -201,7 +154,7 @@ layout_mode = 2
 size_flags_vertical = 0
 
 [node name="Button_Officers" parent="VBoxContainer3/HBoxContainer2" instance=ExtResource("3_3rfnk")]
-custom_minimum_size = Vector2(80, 30)
+custom_minimum_size = Vector2(80, 35)
 layout_mode = 2
 size_flags_horizontal = 3
 text = ""
@@ -209,7 +162,7 @@ myLabel = "CPUNML"
 myColor = 15
 
 [node name="Button_Crew" parent="VBoxContainer3/HBoxContainer2" instance=ExtResource("3_3rfnk")]
-custom_minimum_size = Vector2(80, 30)
+custom_minimum_size = Vector2(80, 35)
 layout_mode = 2
 size_flags_horizontal = 3
 text = ""
@@ -217,7 +170,7 @@ myLabel = "AUDIO"
 myColor = 11
 
 [node name="Button_Passengers" parent="VBoxContainer3/HBoxContainer2" instance=ExtResource("3_3rfnk")]
-custom_minimum_size = Vector2(80, 30)
+custom_minimum_size = Vector2(80, 35)
 layout_mode = 2
 size_flags_horizontal = 3
 text = ""
@@ -241,7 +194,7 @@ layout_mode = 2
 size_flags_vertical = 0
 
 [node name="Button_Officers" parent="VBoxContainer3/HBoxContainer5" instance=ExtResource("3_3rfnk")]
-custom_minimum_size = Vector2(80, 30)
+custom_minimum_size = Vector2(80, 35)
 layout_mode = 2
 size_flags_horizontal = 3
 text = ""
@@ -249,7 +202,7 @@ myLabel = "NORMAL"
 myColor = 15
 
 [node name="Button_Crew" parent="VBoxContainer3/HBoxContainer5" instance=ExtResource("3_3rfnk")]
-custom_minimum_size = Vector2(80, 30)
+custom_minimum_size = Vector2(80, 35)
 layout_mode = 2
 size_flags_horizontal = 3
 text = ""
@@ -257,7 +210,7 @@ myLabel = "NORMAL"
 myColor = 14
 
 [node name="Button_Passengers" parent="VBoxContainer3/HBoxContainer5" instance=ExtResource("3_3rfnk")]
-custom_minimum_size = Vector2(80, 30)
+custom_minimum_size = Vector2(80, 35)
 layout_mode = 2
 size_flags_horizontal = 3
 text = ""
@@ -301,18 +254,18 @@ offset_bottom = 173.0
 
 [node name="IconStar" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(39, 221)
-scale = Vector2(0.0703125, 0.0703125)
+position = Vector2(41, 214)
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("5_mhscg")
 
 [node name="IconTablet" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(131, 222)
-scale = Vector2(0.07, 0.07)
+position = Vector2(138, 214)
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("6_1hbyq")
 
 [node name="IconTablet2" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(223, 222)
-scale = Vector2(0.07, 0.07)
+position = Vector2(226, 214)
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("7_lyv4s")

@@ -8,3 +8,7 @@ res://scene/menu_lifeSupportAreas.tscn
 res://scene/alert.tscn
 res://script/global/gAlert.gd
 res://scene/terminal.gd
+res://scenarioChoiceButton.tscn
+res://scene/scenarioGenerator.tscn
+res://script/scenarioGenerator.gd
+res://scene/scenarioChoiceButton.tscn

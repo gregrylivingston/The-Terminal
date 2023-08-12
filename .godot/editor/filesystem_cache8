@@ -1,5 +1,5 @@
 51fe1a865051a477b22d649c4e95e5d4
-::res://::1691852613
+::res://::1691854047
 ::res://addons/::1691713499
 ::res://addons/dialogue_manager/::1691713501
 constants.gd::GDScript::-1::1691713500::0::1::::<>Node<>::
@@ -37,9 +37,9 @@ title_list.gd::GDScript::-1::1691713500::0::1::::<>VBoxContainer<>::
 title_list.tscn::PackedScene::6134415340044566558::1691713500::0::1::::<><>::res://addons/dialogue_manager/components/title_list.gd
 update_button.gd::GDScript::-1::1691713500::0::1::::<>Button<>::
 update_button.tscn::PackedScene::5825087957514786930::1691713500::0::1::::<><>::res://addons/dialogue_manager/components/update_button.gd<>uid://qdxrxv3c3hxk
-::res://addons/dialogue_manager/example_balloon/::1691851927
+::res://addons/dialogue_manager/example_balloon/::1691853902
 example_balloon.gd::GDScript::-1::1691779415::0::1::::<>Panel<>::
-example_balloon.tscn::PackedScene::2304415056852043862::1691851927::0::1::::<><>::res://addons/dialogue_manager/example_balloon/example_balloon.gd<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn
+example_balloon.tscn::PackedScene::2304415056852043862::1691853902::0::1::::<><>::res://addons/dialogue_manager/example_balloon/example_balloon.gd<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn
 small_example_balloon.tscn::PackedScene::4417311113468315280::1691713501::0::1::::<><>::res://addons/dialogue_manager/example_balloon/example_balloon.gd<>uid://ckvgyvclnwggo
 ::res://addons/dialogue_manager/l10n/::1691713501
 en.mo::Translation::-1::1691713501::0::1::::<><>::
@@ -54,24 +54,27 @@ anomaly_5_fight.dialogue::Resource::7893258857645822296::1691775355::1691852587:
 question_10_whoAreYou.dialogue::Resource::1543130272802675100::1691772506::1691852595::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
 request_5_yellowAlert.dialogue::Resource::7012125225796175614::1691775215::1691852613::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
 request_10_temperature.dialogue::Resource::679750565088779073::1691772055::1691852604::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
-::res://scene/::1691851927
-alert.tscn::PackedScene::2740327839438958602::1691851927::0::1::::<><>::uid://bwoiqnp6pp5rd::::res://scene/button_s.tscn
-button_s.tscn::PackedScene::3959991548336046533::1691851926::0::1::::<><>::uid://c2qygwuwhseie::::res://style/button/SBFlat_White.tres<>uid://cwn0qbqluq4pl::::res://style/button/SBFlat_White_Hover.tres<>uid://b8cfxqyixdpxl::::res://style/button/SBFlat_White_Pressed.tres<>res://script/button_s.gd<>uid://dqa4felyw5nfy::::res://sound/Cursor Rollover 1.wav
-menu_lifeSupportAreas.tscn::PackedScene::1635036406686709617::1691851927::0::1::::<><>::uid://4aoufsu62u03::::res://scene/menu_lifeSupportAreaSummary.tscn
-menu_lifeSupportAreaSummary.tscn::PackedScene::2036362510654217862::1691851927::0::1::::<><>::
-system_oxygen.tscn::PackedScene::1266520112662219439::1691851926::0::1::::<><>::uid://bwoiqnp6pp5rd::::res://scene/button_s.tscn<>uid://80n71s3fle7::::res://scene/tank.tscn
-tank.tscn::PackedScene::69667327791481724::1691851926::0::1::::<><>::res://script/tank.gd
+::res://scene/::1691855039
+alert.tscn::PackedScene::2740327839438958602::1691855038::0::1::::<><>::uid://bwoiqnp6pp5rd::::res://scene/button_s.tscn
+button_s.tscn::PackedScene::3959991548336046533::1691855038::0::1::::<><>::uid://c2qygwuwhseie::::res://style/button/SBFlat_White.tres<>uid://cwn0qbqluq4pl::::res://style/button/SBFlat_White_Hover.tres<>uid://b8cfxqyixdpxl::::res://style/button/SBFlat_White_Pressed.tres<>res://script/button_s.gd<>uid://dqa4felyw5nfy::::res://sound/Cursor Rollover 1.wav
+menu_lifeSupportAreas.tscn::PackedScene::1635036406686709617::1691853902::0::1::::<><>::uid://4aoufsu62u03::::res://scene/menu_lifeSupportAreaSummary.tscn
+menu_lifeSupportAreaSummary.tscn::PackedScene::2036362510654217862::1691853902::0::1::::<><>::
+scenarioChoiceButton.tscn::PackedScene::2806126999276006456::1691855039::0::1::::<><>::uid://csrgmygyo45ks::::res://texture/icon/Icon_ChatBubble.png<>uid://bwoiqnp6pp5rd::::res://scene/button_s.tscn
+scenarioGenerator.tscn::PackedScene::1946851947513666740::1691855039::0::1::::<><>::res://script/scenarioGenerator.gd
+system_oxygen.tscn::PackedScene::1266520112662219439::1691855038::0::1::::<><>::uid://bwoiqnp6pp5rd::::res://scene/button_s.tscn<>uid://80n71s3fle7::::res://scene/tank.tscn
+tank.tscn::PackedScene::69667327791481724::1691855038::0::1::::<><>::res://script/tank.gd
 terminal.gd::GDScript::-1::1691851841::0::1::::<>ColorRect<>::
-terminal.tscn::PackedScene::8827858238738859529::1691851926::0::1::::<><>::res://scene/terminal.gd<>res://script/createColors.gd<>uid://sbrnv2ltnrjb::::res://scene/system_oxygen.tscn<>uid://bwoiqnp6pp5rd::::res://scene/button_s.tscn<>uid://j70uhkodw1hu::::res://sound/music/Tech Lab (Soft Hum) verb.mp3<>uid://dla8gki0uk1k3::::res://texture/icon/Icon_Star.png<>uid://b6ib27ifm2cqu::::res://texture/icon/Icon_Tablet.png<>uid://1ce261pps6l6::::res://texture/icon/Icon_Family.png<>uid://xka2thgerv0d::::res://scene/menu_lifeSupportAreas.tscn
-::res://script/::1691702960
+terminal.tscn::PackedScene::8827858238738859529::1691855038::0::1::::<><>::res://scene/terminal.gd<>res://script/createColors.gd<>uid://sbrnv2ltnrjb::::res://scene/system_oxygen.tscn<>uid://bwoiqnp6pp5rd::::res://scene/button_s.tscn<>uid://j70uhkodw1hu::::res://sound/music/Tech Lab (Soft Hum) verb.mp3<>uid://dla8gki0uk1k3::::res://texture/icon/Icon_Star.png<>uid://b6ib27ifm2cqu::::res://texture/icon/Icon_Tablet.png<>uid://1ce261pps6l6::::res://texture/icon/Icon_Family.png<>uid://xka2thgerv0d::::res://scene/menu_lifeSupportAreas.tscn
+::res://script/::1691854303
 button_s.gd::GDScript::-1::1691692668::0::1::::<>Button<>::
 createColors.gd::GDScript::-1::1691618019::0::1::::<>VBoxContainer<>::
 g.gd::GDScript::-1::1691702960::0::1::::<>Node<>::
+scenarioGenerator.gd::GDScript::-1::1691854303::0::1::::<>Panel<>::
 tank.gd::GDScript::-1::1691631160::0::1::::<>Button<>::
 ::res://script/class/::1691702864
 character.gd::GDScript::-1::1691702864::0::1::::Character<>Resource<>::
-::res://script/global/::1691851880
-gAlert.gd::GDScript::-1::1691851880::0::1::::<>Node<>::
+::res://script/global/::1691852722
+gAlert.gd::GDScript::-1::1691852722::0::1::::<>Node<>::
 names.gd::GDScript::-1::1691689941::0::1::::<>Node<>::
 ::res://sound/::1691668803
 Btn.wav::AudioStreamWAV::3857441284992195291::1691617811::1691668803::1::::<><>::
@@ -101,11 +104,14 @@ SBFlat_White.tres::StyleBoxFlat::6702439299687294948::1691609844::0::1::::<><>::
 SBFlat_White_Hover.tres::StyleBoxFlat::6345379413514731677::1691610122::0::1::::<><>::
 SBFlat_White_Pressed.tres::StyleBoxFlat::4707126815323197661::1691610215::0::1::::<><>::
 ::res://texture/::1691668816
-::res://texture/icon/::1691668841
+::res://texture/icon/::1691855594
 Icon_Arrow.png::CompressedTexture2D::6435624415339845811::1691668841::1691668841::1::::<><>::
 Icon_ChatBubble.png::CompressedTexture2D::6071721977112822438::1691668841::1691668841::1::::<><>::
 Icon_Coffee.png::CompressedTexture2D::4395079309178433491::1691668841::1691668841::1::::<><>::
 Icon_Family.png::CompressedTexture2D::1829331443594548977::1691668841::1691668841::1::::<><>::
+Icon_PlanetStation.png::CompressedTexture2D::2712996078243102927::1691855576::1691855576::1::::<><>::
+icon_rocket.png::CompressedTexture2D::7007824916569822241::1691855594::1691855595::1::::<><>::
+Icon_SpaceStation.png::CompressedTexture2D::2500799449267681741::1691855576::1691855576::1::::<><>::
 Icon_Star.png::CompressedTexture2D::7933354245377354632::1691668841::1691668841::1::::<><>::
 Icon_Tablet.png::CompressedTexture2D::4578900485282698996::1691668841::1691668841::1::::<><>::
 Icon_TextBubble.png::CompressedTexture2D::5183541272222141385::1691668841::1691668841::1::::<><>::

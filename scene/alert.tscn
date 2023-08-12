@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bwoiqnp6pp5rd" path="res://scene/button_s.tscn" id="1_ii7ga"]
 
 [node name="alert" type="Control"]
-custom_minimum_size = Vector2(0, 30)
+custom_minimum_size = Vector2(0, 35)
 layout_mode = 3
 anchors_preset = 0
 
