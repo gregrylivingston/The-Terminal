@@ -5,3 +5,6 @@ res://scene/system_oxygen.tscn
 res://scene/button_s.tscn
 res://addons/dialogue_manager/example_balloon/example_balloon.tscn
 res://scene/menu_lifeSupportAreas.tscn
+res://scene/alert.tscn
+res://script/global/gAlert.gd
+res://scene/terminal.gd

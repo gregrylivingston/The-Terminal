@@ -77,56 +77,56 @@ offset_right = 286.0
 offset_bottom = 1003.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_hceqv")
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="Panel"]
+[node name="alertVbox" type="VBoxContainer" parent="Panel"]
 layout_mode = 0
-offset_left = 94.0
+offset_left = 100.0
 offset_top = 19.0
 offset_right = 348.0
 offset_bottom = 586.0
 
-[node name="Button_S7" parent="Panel/VBoxContainer2" instance=ExtResource("3_3rfnk")]
+[node name="Button_S7" parent="Panel/alertVbox" instance=ExtResource("3_3rfnk")]
 layout_mode = 2
 myLabel = "CAPTAIN OVERRIDE COMMAND"
 
-[node name="Button_S4" parent="Panel/VBoxContainer2" instance=ExtResource("3_3rfnk")]
+[node name="Button_S4" parent="Panel/alertVbox" instance=ExtResource("3_3rfnk")]
 layout_mode = 2
 myLabel = "SENSOR ALERT"
 
-[node name="Button_S8" parent="Panel/VBoxContainer2" instance=ExtResource("3_3rfnk")]
+[node name="Button_S8" parent="Panel/alertVbox" instance=ExtResource("3_3rfnk")]
 layout_mode = 2
 myLabel = "BIOSENSOR ALERT"
 
-[node name="Button_S9" parent="Panel/VBoxContainer2" instance=ExtResource("3_3rfnk")]
+[node name="Button_S9" parent="Panel/alertVbox" instance=ExtResource("3_3rfnk")]
 layout_mode = 2
 myLabel = "SENSOR WARNING"
 myColor = 4
 
-[node name="Button_S10" parent="Panel/VBoxContainer2" instance=ExtResource("3_3rfnk")]
+[node name="Button_S10" parent="Panel/alertVbox" instance=ExtResource("3_3rfnk")]
 layout_mode = 2
 myLabel = "BIOSENSOR WARNING"
 myColor = 4
 
-[node name="Button_S5" parent="Panel/VBoxContainer2" instance=ExtResource("3_3rfnk")]
+[node name="Button_S5" parent="Panel/alertVbox" instance=ExtResource("3_3rfnk")]
 layout_mode = 2
 myLabel = "CAPTAIN REQUEST"
 myColor = 15
 
-[node name="Button_S6" parent="Panel/VBoxContainer2" instance=ExtResource("3_3rfnk")]
+[node name="Button_S6" parent="Panel/alertVbox" instance=ExtResource("3_3rfnk")]
 layout_mode = 2
 myLabel = "OFFICER REQUEST"
 myColor = 15
 
-[node name="Button_S3" parent="Panel/VBoxContainer2" instance=ExtResource("3_3rfnk")]
+[node name="Button_S3" parent="Panel/alertVbox" instance=ExtResource("3_3rfnk")]
 layout_mode = 2
 myLabel = "SENSOR ANOMALY"
 myColor = 8
 
-[node name="Button_S" parent="Panel/VBoxContainer2" instance=ExtResource("3_3rfnk")]
+[node name="Button_S" parent="Panel/alertVbox" instance=ExtResource("3_3rfnk")]
 layout_mode = 2
 myLabel = "PASSENGER QUESTION"
 myColor = 13
 
-[node name="Button_S2" parent="Panel/VBoxContainer2" instance=ExtResource("3_3rfnk")]
+[node name="Button_S2" parent="Panel/alertVbox" instance=ExtResource("3_3rfnk")]
 layout_mode = 2
 myLabel = "PASSENGER REQUEST"
 myColor = 13
@@ -179,45 +179,85 @@ autoplay = true
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 1.0
-offset_top = 114.0
-offset_right = 283.0
-offset_bottom = 242.0
+offset_left = 7.0
+offset_top = 49.0
+offset_right = 295.0
+offset_bottom = 244.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer3"]
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_vertical = 0
 
 [node name="Button_Officers" parent="VBoxContainer3/HBoxContainer" instance=ExtResource("3_3rfnk")]
-custom_minimum_size = Vector2(80, 40)
+custom_minimum_size = Vector2(80, 30)
 layout_mode = 2
 size_flags_horizontal = 3
 text = ""
-myLabel = "STATUS NORMAL"
-myColor = 8
+myLabel = "MY SETTINGS"
+myColor = 4
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer3"]
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_vertical = 0
 
 [node name="Button_Officers" parent="VBoxContainer3/HBoxContainer2" instance=ExtResource("3_3rfnk")]
-custom_minimum_size = Vector2(80, 40)
+custom_minimum_size = Vector2(80, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+text = ""
+myLabel = "CPUNML"
+myColor = 15
+
+[node name="Button_Crew" parent="VBoxContainer3/HBoxContainer2" instance=ExtResource("3_3rfnk")]
+custom_minimum_size = Vector2(80, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+text = ""
+myLabel = "AUDIO"
+myColor = 11
+
+[node name="Button_Passengers" parent="VBoxContainer3/HBoxContainer2" instance=ExtResource("3_3rfnk")]
+custom_minimum_size = Vector2(80, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+text = ""
+myLabel = "CPULOAD"
+myColor = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Button_Officers" parent="VBoxContainer3/HBoxContainer4" instance=ExtResource("3_3rfnk")]
+custom_minimum_size = Vector2(80, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+text = ""
+myLabel = "CREW STATUS NORMAL"
+myColor = 8
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Button_Officers" parent="VBoxContainer3/HBoxContainer5" instance=ExtResource("3_3rfnk")]
+custom_minimum_size = Vector2(80, 30)
 layout_mode = 2
 size_flags_horizontal = 3
 text = ""
 myLabel = "NORMAL"
 myColor = 15
 
-[node name="Button_Crew" parent="VBoxContainer3/HBoxContainer2" instance=ExtResource("3_3rfnk")]
-custom_minimum_size = Vector2(80, 40)
+[node name="Button_Crew" parent="VBoxContainer3/HBoxContainer5" instance=ExtResource("3_3rfnk")]
+custom_minimum_size = Vector2(80, 30)
 layout_mode = 2
 size_flags_horizontal = 3
 text = ""
 myLabel = "NORMAL"
 myColor = 14
 
-[node name="Button_Passengers" parent="VBoxContainer3/HBoxContainer2" instance=ExtResource("3_3rfnk")]
-custom_minimum_size = Vector2(80, 40)
+[node name="Button_Passengers" parent="VBoxContainer3/HBoxContainer5" instance=ExtResource("3_3rfnk")]
+custom_minimum_size = Vector2(80, 30)
 layout_mode = 2
 size_flags_horizontal = 3
 text = ""
@@ -229,21 +269,21 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="Button_Officers" parent="VBoxContainer3/HBoxContainer3" instance=ExtResource("3_3rfnk")]
-custom_minimum_size = Vector2(80, 40)
+custom_minimum_size = Vector2(80, 30)
 layout_mode = 2
 size_flags_horizontal = 3
 text = "7      "
 myColor = 15
 
 [node name="Button_Crew" parent="VBoxContainer3/HBoxContainer3" instance=ExtResource("3_3rfnk")]
-custom_minimum_size = Vector2(80, 40)
+custom_minimum_size = Vector2(80, 30)
 layout_mode = 2
 size_flags_horizontal = 3
 text = "4       "
 myColor = 14
 
 [node name="Button_Passengers" parent="VBoxContainer3/HBoxContainer3" instance=ExtResource("3_3rfnk")]
-custom_minimum_size = Vector2(80, 40)
+custom_minimum_size = Vector2(80, 30)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = SubResource("StyleBoxFlat_g6uoe")

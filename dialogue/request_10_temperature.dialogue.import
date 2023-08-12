@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://jxjnlyue6sjp"
+path="res://.godot/imported/request_10_temperature.dialogue-1bfdb95e2b138e72b5f47e33e98259be.tres"
+
+[deps]
+
+source_file="res://dialogue/request_10_temperature.dialogue"
+dest_files=["res://.godot/imported/request_10_temperature.dialogue-1bfdb95e2b138e72b5f47e33e98259be.tres"]
+
+[params]
+
+defaults=true

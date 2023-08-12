@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfbo2f20d3g87"]
+
+[ext_resource type="PackedScene" uid="uid://bwoiqnp6pp5rd" path="res://scene/button_s.tscn" id="1_ii7ga"]
+
+[node name="alert" type="Control"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Button_S" parent="." instance=ExtResource("1_ii7ga")]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2

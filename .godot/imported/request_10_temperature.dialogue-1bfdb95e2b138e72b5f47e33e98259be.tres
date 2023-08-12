@@ -1,0 +1,97 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_17qjq"]
+
+[resource]
+script = ExtResource("1_17qjq")
+titles = {
+"REQUEST": "3"
+}
+character_names = PackedStringArray("Nathan")
+first_title = "3"
+lines = {
+"1": {
+"next_id": "3",
+"text": "REQUEST",
+"type": "title"
+},
+"10": {
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "9",
+"type": "goto"
+},
+"11": {
+"next_id": "end",
+"next_id_after": "15",
+"text": "Sorry, you do not have permission to change the temperature.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Sorry, you do not have permission to change the temperature.",
+"type": "response"
+},
+"12": {
+"next_id": "15",
+"next_id_after": "15",
+"text": "Are you feeling ok?  Your biomarkers indicate a doctors visit may be in order. Please make your way to the medical bay and I will inform the doctor.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Are you feeling ok?  Your biomarkers indicate a doctors visit may be in order. Please make your way to the medical bay and I will inform the doctor.",
+"type": "response"
+},
+"15": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"3": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "4",
+"text": "[[Computer|Aiden|AI]], [[It's a little warm in here.|I'm feeling hot.|Is it just me or is it getting hot in here.|]]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[Computer|Aiden|AI]], [[It's a little warm in here.|I'm feeling hot.|Is it just me or is it getting hot in here.|]]",
+"type": "dialogue"
+},
+"4": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "5",
+"text": "Please lower the temperature by 2 degrees.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Please lower the temperature by 2 degrees.",
+"type": "dialogue"
+},
+"5": {
+"next_id": "6",
+"next_id_after": "15",
+"responses": PackedStringArray("5", "9", "11", "12"),
+"text": "Comfirmed.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Comfirmed.",
+"type": "response"
+},
+"6": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "7",
+"parent_id": "5",
+"text": "[i]Set the temperature in the Library to 21C.[i]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[i]Set the temperature in the Library to 21C.[i]",
+"type": "dialogue"
+},
+"7": {
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "5",
+"type": "goto"
+},
+"9": {
+"next_id": "10",
+"next_id_after": "15",
+"text": "Setting Library temperature to 21C.  [i]Set the temperature in the Library to 21C.[i]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Setting Library temperature to 21C.  [i]Set the temperature in the Library to 21C.[i]",
+"type": "response"
+}
+}
+metadata/dialogue_manager_version = "2.17.0"

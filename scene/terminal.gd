@@ -2,8 +2,13 @@ extends ColorRect
 
 var nodes = {}
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
+	gAlert.alertVbox = $Panel/alertVbox
+	gAlert.startAlerts()
+	
 	nodes.officerButton = $VBoxContainer3/HBoxContainer3/Button_Officers
 	nodes.crewButton = $VBoxContainer3/HBoxContainer3/Button_Crew
 	nodes.passengerButton = $VBoxContainer3/HBoxContainer3/Button_Passengers
@@ -19,10 +24,6 @@ func _ready():
 	nodes.crewButton.text = str(charStats[G.characterClass.CREWMEMBER]) + "      "
 	nodes.passengerButton.text = str(charStats[G.characterClass.PASSENGER]) + "        "
 	
-	$Panel/VBoxContainer2/Button_S.connect("pressed",showDialogue.bind("question_whoAreYou" , $Panel/VBoxContainer2/Button_S ))
-	$Panel/VBoxContainer2/Button_S2.connect("pressed",showDialogue.bind("request_temperature" , $Panel/VBoxContainer2/Button_S2 ))
-	$Panel/VBoxContainer2/Button_S6.connect("pressed",showDialogue.bind("request_yellowAlert" , $Panel/VBoxContainer2/Button_S6))
-	$Panel/VBoxContainer2/Button_S3.connect("pressed",showDialogue.bind("anomaly_fight" , $Panel/VBoxContainer2/Button_S3))
 	
 func showCharacters(characterClass):
 	nodes.personListHeader.text = "[i]"+ G.characterClass.find_key(characterClass)+"S[/i]"
@@ -34,6 +35,3 @@ func addCharacterButton(char):
 	newButton.setupCharacter(char)
 	nodes.personListVbox.add_child(newButton)
 	
-func showDialogue(dialogueTitle, button):
-	button.queue_free()
-	DialogueManager.show_example_dialogue_balloon(load("res://dialogue/" + dialogueTitle +".dialogue"), "Temperature Request")

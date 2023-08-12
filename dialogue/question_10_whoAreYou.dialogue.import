@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://v8reoo8kmeoq"
+path="res://.godot/imported/question_10_whoAreYou.dialogue-6bd9a679c88fc1c84c80e6b841955184.tres"
+
+[deps]
+
+source_file="res://dialogue/question_10_whoAreYou.dialogue"
+dest_files=["res://.godot/imported/question_10_whoAreYou.dialogue-6bd9a679c88fc1c84c80e6b841955184.tres"]
+
+[params]
+
+defaults=true

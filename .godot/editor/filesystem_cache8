@@ -1,5 +1,5 @@
 51fe1a865051a477b22d649c4e95e5d4
-::res://::1691802602
+::res://::1691852613
 ::res://addons/::1691713499
 ::res://addons/dialogue_manager/::1691713501
 constants.gd::GDScript::-1::1691713500::0::1::::<>Node<>::
@@ -37,9 +37,9 @@ title_list.gd::GDScript::-1::1691713500::0::1::::<>VBoxContainer<>::
 title_list.tscn::PackedScene::6134415340044566558::1691713500::0::1::::<><>::res://addons/dialogue_manager/components/title_list.gd
 update_button.gd::GDScript::-1::1691713500::0::1::::<>Button<>::
 update_button.tscn::PackedScene::5825087957514786930::1691713500::0::1::::<><>::res://addons/dialogue_manager/components/update_button.gd<>uid://qdxrxv3c3hxk
-::res://addons/dialogue_manager/example_balloon/::1691792770
+::res://addons/dialogue_manager/example_balloon/::1691851927
 example_balloon.gd::GDScript::-1::1691779415::0::1::::<>Panel<>::
-example_balloon.tscn::PackedScene::2304415056852043862::1691792770::0::1::::<><>::res://addons/dialogue_manager/example_balloon/example_balloon.gd<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn
+example_balloon.tscn::PackedScene::2304415056852043862::1691851927::0::1::::<><>::res://addons/dialogue_manager/example_balloon/example_balloon.gd<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn
 small_example_balloon.tscn::PackedScene::4417311113468315280::1691713501::0::1::::<><>::res://addons/dialogue_manager/example_balloon/example_balloon.gd<>uid://ckvgyvclnwggo
 ::res://addons/dialogue_manager/l10n/::1691713501
 en.mo::Translation::-1::1691713501::0::1::::<><>::
@@ -49,19 +49,20 @@ main_view.gd::GDScript::-1::1691713501::0::1::::<>Control<>::
 main_view.tscn::PackedScene::4884668666408697448::1691713501::0::1::::<><>::res://addons/dialogue_manager/views/main_view.gd<>uid://civ6shmka5e8u
 settings_view.gd::GDScript::-1::1691713501::0::1::::<>VBoxContainer<>::
 settings_view.tscn::PackedScene::5839841081119266502::1691713501::0::1::::<><>::res://addons/dialogue_manager/views/settings_view.gd
-::res://dialogue/::1691775355
-anomaly_fight.dialogue::Resource::7893258857645822296::1691775355::1691775355::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
-question_whoAreYou.dialogue::Resource::1543130272802675100::1691772506::1691772506::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
-request_temperature.dialogue::Resource::679750565088779073::1691772055::1691772056::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
-request_yellowAlert.dialogue::Resource::7012125225796175614::1691775215::1691775215::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
-::res://scene/::1691792771
-button_s.tscn::PackedScene::3959991548336046533::1691792770::0::1::::<><>::uid://c2qygwuwhseie::::res://style/button/SBFlat_White.tres<>uid://cwn0qbqluq4pl::::res://style/button/SBFlat_White_Hover.tres<>uid://b8cfxqyixdpxl::::res://style/button/SBFlat_White_Pressed.tres<>res://script/button_s.gd<>uid://dqa4felyw5nfy::::res://sound/Cursor Rollover 1.wav
-menu_lifeSupportAreas.tscn::PackedScene::1635036406686709617::1691792770::0::1::::<><>::uid://4aoufsu62u03::::res://scene/menu_lifeSupportAreaSummary.tscn
-menu_lifeSupportAreaSummary.tscn::PackedScene::2036362510654217862::1691792771::0::1::::<><>::
-system_oxygen.tscn::PackedScene::1266520112662219439::1691792770::0::1::::<><>::uid://bwoiqnp6pp5rd::::res://scene/button_s.tscn<>uid://80n71s3fle7::::res://scene/tank.tscn
-tank.tscn::PackedScene::69667327791481724::1691792770::0::1::::<><>::res://script/tank.gd
-terminal.gd::GDScript::-1::1691779604::0::1::::<>ColorRect<>::
-terminal.tscn::PackedScene::8827858238738859529::1691792770::0::1::::<><>::res://scene/terminal.gd<>res://script/createColors.gd<>uid://sbrnv2ltnrjb::::res://scene/system_oxygen.tscn<>uid://bwoiqnp6pp5rd::::res://scene/button_s.tscn<>uid://j70uhkodw1hu::::res://sound/music/Tech Lab (Soft Hum) verb.mp3<>uid://dla8gki0uk1k3::::res://texture/icon/Icon_Star.png<>uid://b6ib27ifm2cqu::::res://texture/icon/Icon_Tablet.png<>uid://1ce261pps6l6::::res://texture/icon/Icon_Family.png<>uid://xka2thgerv0d::::res://scene/menu_lifeSupportAreas.tscn
+::res://dialogue/::1691852613
+anomaly_5_fight.dialogue::Resource::7893258857645822296::1691775355::1691852587::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
+question_10_whoAreYou.dialogue::Resource::1543130272802675100::1691772506::1691852595::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
+request_5_yellowAlert.dialogue::Resource::7012125225796175614::1691775215::1691852613::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
+request_10_temperature.dialogue::Resource::679750565088779073::1691772055::1691852604::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
+::res://scene/::1691851927
+alert.tscn::PackedScene::2740327839438958602::1691851927::0::1::::<><>::uid://bwoiqnp6pp5rd::::res://scene/button_s.tscn
+button_s.tscn::PackedScene::3959991548336046533::1691851926::0::1::::<><>::uid://c2qygwuwhseie::::res://style/button/SBFlat_White.tres<>uid://cwn0qbqluq4pl::::res://style/button/SBFlat_White_Hover.tres<>uid://b8cfxqyixdpxl::::res://style/button/SBFlat_White_Pressed.tres<>res://script/button_s.gd<>uid://dqa4felyw5nfy::::res://sound/Cursor Rollover 1.wav
+menu_lifeSupportAreas.tscn::PackedScene::1635036406686709617::1691851927::0::1::::<><>::uid://4aoufsu62u03::::res://scene/menu_lifeSupportAreaSummary.tscn
+menu_lifeSupportAreaSummary.tscn::PackedScene::2036362510654217862::1691851927::0::1::::<><>::
+system_oxygen.tscn::PackedScene::1266520112662219439::1691851926::0::1::::<><>::uid://bwoiqnp6pp5rd::::res://scene/button_s.tscn<>uid://80n71s3fle7::::res://scene/tank.tscn
+tank.tscn::PackedScene::69667327791481724::1691851926::0::1::::<><>::res://script/tank.gd
+terminal.gd::GDScript::-1::1691851841::0::1::::<>ColorRect<>::
+terminal.tscn::PackedScene::8827858238738859529::1691851926::0::1::::<><>::res://scene/terminal.gd<>res://script/createColors.gd<>uid://sbrnv2ltnrjb::::res://scene/system_oxygen.tscn<>uid://bwoiqnp6pp5rd::::res://scene/button_s.tscn<>uid://j70uhkodw1hu::::res://sound/music/Tech Lab (Soft Hum) verb.mp3<>uid://dla8gki0uk1k3::::res://texture/icon/Icon_Star.png<>uid://b6ib27ifm2cqu::::res://texture/icon/Icon_Tablet.png<>uid://1ce261pps6l6::::res://texture/icon/Icon_Family.png<>uid://xka2thgerv0d::::res://scene/menu_lifeSupportAreas.tscn
 ::res://script/::1691702960
 button_s.gd::GDScript::-1::1691692668::0::1::::<>Button<>::
 createColors.gd::GDScript::-1::1691618019::0::1::::<>VBoxContainer<>::
@@ -69,7 +70,8 @@ g.gd::GDScript::-1::1691702960::0::1::::<>Node<>::
 tank.gd::GDScript::-1::1691631160::0::1::::<>Button<>::
 ::res://script/class/::1691702864
 character.gd::GDScript::-1::1691702864::0::1::::Character<>Resource<>::
-::res://script/global/::1691689941
+::res://script/global/::1691851880
+gAlert.gd::GDScript::-1::1691851880::0::1::::<>Node<>::
 names.gd::GDScript::-1::1691689941::0::1::::<>Node<>::
 ::res://sound/::1691668803
 Btn.wav::AudioStreamWAV::3857441284992195291::1691617811::1691668803::1::::<><>::

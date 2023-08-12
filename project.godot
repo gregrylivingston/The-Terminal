@@ -20,6 +20,7 @@ config/icon="res://sound/icon.svg"
 G="*res://script/g.gd"
 Names="*res://script/global/names.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+gAlert="*res://script/global/gAlert.gd"
 
 [display]
 
@@ -34,7 +35,7 @@ enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogue/temperatureRequest.dialogue", "res://dialogue/request_temperature.dialogue", "res://dialogue/question_whoAreYou.dialogue", "res://dialogue/request_yellowAlert.dialogue", "res://dialogue/anomaly_fight.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogue/temperatureRequest.dialogue", "res://dialogue/request_temperature.dialogue", "res://dialogue/question_whoAreYou.dialogue", "res://dialogue/request_yellowAlert.dialogue", "res://dialogue/anomaly_fight.dialogue", "res://dialogue/anomaly_5_fight.dialogue", "res://dialogue/question_10_whoAreYou.dialogue", "res://dialogue/request_10_temperature.dialogue", "res://dialogue/request_5_yellowAlert.dialogue")
 
 [rendering]
 
