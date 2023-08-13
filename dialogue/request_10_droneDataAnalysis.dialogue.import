@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://b8n1nkgu4dqe5"
+path="res://.godot/imported/request_10_droneDataAnalysis.dialogue-2a1547819aae18ad15f258857e95f7d4.tres"
+
+[deps]
+
+source_file="res://dialogue/request_10_droneDataAnalysis.dialogue"
+dest_files=["res://.godot/imported/request_10_droneDataAnalysis.dialogue-2a1547819aae18ad15f258857e95f7d4.tres"]
+
+[params]
+
+defaults=true

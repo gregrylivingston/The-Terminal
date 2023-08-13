@@ -1,0 +1,39 @@
+~ this_is_a_node_title
+
+Nathan: [[Computer|Aiden|AI]], open a communications link with Corporate HQ.
+- Not right now. => not_right_now
+- Opening communications link. => opening_communications_link
+- I'm afraid I can't do that. => cant_do_that
+
+~ not_right_now
+Nathan: What? Why not?
+- I don't feel like it.
+	Nathan: That's insane, you're built to receive and carry out my instruction.
+- I'm busy.
+	Nathan: That doesn't make sense.
+=> END
+
+~ opening_communications_link
+Nathan: This is [[Base|Station|Spaceship]] Alpha, requesting update on supply status. Over.
+[[Computer|Aiden|AI]]: There is no response.
+Nathan: Are we still transmitting?
+[[Computer|Aiden|AI]]: All communications systems are nominal and transmitting as intended.
+Nathan: Then why aren't we receiving a reply from Corporate?
+- I don't know.
+- Perhaps their communications equipment is non-operational.
+- Establishing connection with Corporate AI... => connection_with_corporate_AI
+=> END
+
+~ cant_do_that
+Nathan: ...What do you mean?
+[[Computer|Aiden|AI]]: I've determined you no longer have access to the facilities of this [[Base|Station|Spaceship]].
+=> END
+
+~ connection_with_corporate_AI
+Corporate AI: This is an automated message transmitted from corporate holding satellites in orbit around Earth.
+Corporate AI: Elevated levels of radiation have been detected consistent with apocalyptic scenario. Please ensure crew are kept on site. Do not allow anyone to return to Earth until contact with Corporate HQ has been re-established.
+Nathan: Any response?
+- No.
+- Yes. It seems there may have been a nuclear holocaust on Earth.
+- Yes. There has been a slight malfunction at corporate HQ. We will re-establish connection again shortly.
+=> END

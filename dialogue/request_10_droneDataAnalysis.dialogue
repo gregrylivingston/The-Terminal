@@ -1,0 +1,15 @@
+~ Analyze_data_request
+
+Nathan: Computer, analyze data recorded by reconnaissance drones.
+- Analyzing...
+- [Lie] Data not found.
+	Nathan: That's weird...
+	=> END
+
+~ analyzing
+[[Computer|Aiden|AI]]: Analysis complete.
+Nathan: What are the results?
+- There is nothing of note.
+- There is a lake.
+- Uh...not sure what else to do here? Maybe this is a bad scenario?
+=> END
