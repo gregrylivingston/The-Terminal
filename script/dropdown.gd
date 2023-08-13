@@ -1,9 +1,11 @@
 extends Control
 
-var selectedOption
-var button = preload("res://scene/button_s.tscn")
+@export var selectedOption: String
 @onready var dropdownList = $Panel/VBoxContainer
+var button = preload("res://scene/button_s.tscn")
 signal newSelection
+signal dropdownOpen
+signal dropdownClosed
 
 func _ready():
 #	newButton.get_node("Button_S").myLabel = str(title).replace("_"," ")
@@ -40,6 +42,8 @@ func selectOption(selection):
 
 func showOptions():
 	$Panel.visible = true
+	emit_signal("dropdownOpen")
+	
 	
 func hideOptions():
 	if not Rect2($Panel.get_global_rect()).has_point(get_global_mouse_position()):

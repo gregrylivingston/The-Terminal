@@ -1,0 +1,114 @@
+[gd_scene load_steps=7 format=3 uid="uid://45rggagx5jny"]
+
+[ext_resource type="PackedScene" uid="uid://bwoiqnp6pp5rd" path="res://scene/button_s.tscn" id="1_0kft3"]
+[ext_resource type="Script" path="res://script/menu_topLeftCrew.gd" id="1_8j2x3"]
+[ext_resource type="PackedScene" uid="uid://ctcpkw3ko6tm1" path="res://scene/menu_crewStatus.tscn" id="2_hk7xi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g6uoe"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_bottom_right = 75
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qs14j"]
+bg_color = Color(0.862745, 0.862745, 0.862745, 1)
+corner_radius_bottom_right = 75
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7yew6"]
+bg_color = Color(0.862745, 0.862745, 0.862745, 1)
+corner_radius_bottom_right = 75
+
+[node name="VBoxContainer3" type="VBoxContainer"]
+offset_left = 7.0
+offset_top = 34.0
+offset_right = 295.0
+offset_bottom = 244.0
+script = ExtResource("1_8j2x3")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Button_Officers" parent="HBoxContainer" instance=ExtResource("1_0kft3")]
+custom_minimum_size = Vector2(80, 35)
+layout_mode = 2
+size_flags_horizontal = 3
+text = ""
+myLabel = "MY SETTINGS"
+myColor = 4
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Button_Officers" parent="HBoxContainer2" instance=ExtResource("1_0kft3")]
+custom_minimum_size = Vector2(80, 35)
+layout_mode = 2
+size_flags_horizontal = 3
+text = ""
+myLabel = "CPUNML"
+myColor = 15
+
+[node name="Button_Crew" parent="HBoxContainer2" instance=ExtResource("1_0kft3")]
+custom_minimum_size = Vector2(80, 35)
+layout_mode = 2
+size_flags_horizontal = 3
+text = ""
+myLabel = "AUDIO"
+myColor = 11
+
+[node name="Button_Passengers" parent="HBoxContainer2" instance=ExtResource("1_0kft3")]
+custom_minimum_size = Vector2(80, 35)
+layout_mode = 2
+size_flags_horizontal = 3
+text = ""
+myLabel = "CPULOAD"
+myColor = 2
+
+[node name="HSeparator" type="HSeparator" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Button_Officers" parent="HBoxContainer4" instance=ExtResource("1_0kft3")]
+custom_minimum_size = Vector2(80, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+text = ""
+myLabel = "CREW STATUS NORMAL"
+myColor = 8
+
+[node name="HBoxContainer5" parent="." instance=ExtResource("2_hk7xi")]
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button_Officers" parent="HBoxContainer3" instance=ExtResource("1_0kft3")]
+custom_minimum_size = Vector2(80, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "7      "
+myColor = 15
+
+[node name="Button_Crew" parent="HBoxContainer3" instance=ExtResource("1_0kft3")]
+custom_minimum_size = Vector2(80, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "4       "
+myColor = 14
+
+[node name="Button_Passengers" parent="HBoxContainer3" instance=ExtResource("1_0kft3")]
+custom_minimum_size = Vector2(80, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+theme_override_styles/normal = SubResource("StyleBoxFlat_g6uoe")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qs14j")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7yew6")
+text = "0        "
+myColor = 13

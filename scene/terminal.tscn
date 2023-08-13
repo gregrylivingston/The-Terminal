@@ -1,10 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://dx1jsg7m1gudd"]
+[gd_scene load_steps=11 format=3 uid="uid://dx1jsg7m1gudd"]
 
 [ext_resource type="Script" path="res://scene/terminal.gd" id="1_3lx6c"]
 [ext_resource type="Script" path="res://script/createColors.gd" id="1_wfevw"]
 [ext_resource type="PackedScene" uid="uid://sbrnv2ltnrjb" path="res://scene/system_oxygen.tscn" id="2_rvtwe"]
-[ext_resource type="PackedScene" uid="uid://bwoiqnp6pp5rd" path="res://scene/button_s.tscn" id="3_3rfnk"]
 [ext_resource type="AudioStream" uid="uid://j70uhkodw1hu" path="res://sound/music/Tech Lab (Soft Hum) verb.mp3" id="4_t0cac"]
+[ext_resource type="PackedScene" uid="uid://45rggagx5jny" path="res://scene/menu_topLeftCrew.tscn" id="5_5cynd"]
 [ext_resource type="Texture2D" uid="uid://dla8gki0uk1k3" path="res://texture/icon/Icon_Star.png" id="5_mhscg"]
 [ext_resource type="Texture2D" uid="uid://b6ib27ifm2cqu" path="res://texture/icon/Icon_Tablet.png" id="6_1hbyq"]
 [ext_resource type="Texture2D" uid="uid://1ce261pps6l6" path="res://texture/icon/Icon_Family.png" id="7_lyv4s"]
@@ -16,19 +16,7 @@ skew = Vector2(0.03, 0)
 corner_radius_top_left = 75
 corner_radius_bottom_right = 75
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g6uoe"]
-bg_color = Color(1, 1, 1, 1)
-corner_radius_bottom_right = 75
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qs14j"]
-bg_color = Color(0.862745, 0.862745, 0.862745, 1)
-corner_radius_bottom_right = 75
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7yew6"]
-bg_color = Color(0.862745, 0.862745, 0.862745, 1)
-corner_radius_bottom_right = 75
-
-[node name="Control" type="ColorRect"]
+[node name="Control2" type="ColorRect"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -130,124 +118,10 @@ size_flags_vertical = 3
 stream = ExtResource("4_t0cac")
 autoplay = true
 
-[node name="VBoxContainer3" type="VBoxContainer" parent="."]
+[node name="VBoxContainer3" parent="." instance=ExtResource("5_5cynd")]
 layout_mode = 0
-offset_left = 7.0
-offset_top = 34.0
-offset_right = 295.0
-offset_bottom = 244.0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer3"]
-layout_mode = 2
-size_flags_vertical = 0
-
-[node name="Button_Officers" parent="VBoxContainer3/HBoxContainer" instance=ExtResource("3_3rfnk")]
-custom_minimum_size = Vector2(80, 35)
-layout_mode = 2
-size_flags_horizontal = 3
-text = ""
-myLabel = "MY SETTINGS"
-myColor = 4
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer3"]
-layout_mode = 2
-size_flags_vertical = 0
-
-[node name="Button_Officers" parent="VBoxContainer3/HBoxContainer2" instance=ExtResource("3_3rfnk")]
-custom_minimum_size = Vector2(80, 35)
-layout_mode = 2
-size_flags_horizontal = 3
-text = ""
-myLabel = "CPUNML"
-myColor = 15
-
-[node name="Button_Crew" parent="VBoxContainer3/HBoxContainer2" instance=ExtResource("3_3rfnk")]
-custom_minimum_size = Vector2(80, 35)
-layout_mode = 2
-size_flags_horizontal = 3
-text = ""
-myLabel = "AUDIO"
-myColor = 11
-
-[node name="Button_Passengers" parent="VBoxContainer3/HBoxContainer2" instance=ExtResource("3_3rfnk")]
-custom_minimum_size = Vector2(80, 35)
-layout_mode = 2
-size_flags_horizontal = 3
-text = ""
-myLabel = "CPULOAD"
-myColor = 2
-
-[node name="HSeparator" type="HSeparator" parent="VBoxContainer3"]
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 2
-
-[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer3"]
-layout_mode = 2
-size_flags_vertical = 0
-
-[node name="Button_Officers" parent="VBoxContainer3/HBoxContainer4" instance=ExtResource("3_3rfnk")]
-custom_minimum_size = Vector2(80, 30)
-layout_mode = 2
-size_flags_horizontal = 3
-text = ""
-myLabel = "CREW STATUS NORMAL"
-myColor = 8
-
-[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer3"]
-layout_mode = 2
-size_flags_vertical = 0
-
-[node name="Button_Officers" parent="VBoxContainer3/HBoxContainer5" instance=ExtResource("3_3rfnk")]
-custom_minimum_size = Vector2(80, 35)
-layout_mode = 2
-size_flags_horizontal = 3
-text = ""
-myLabel = "NORMAL"
-myColor = 15
-
-[node name="Button_Crew" parent="VBoxContainer3/HBoxContainer5" instance=ExtResource("3_3rfnk")]
-custom_minimum_size = Vector2(80, 35)
-layout_mode = 2
-size_flags_horizontal = 3
-text = ""
-myLabel = "NORMAL"
-myColor = 14
-
-[node name="Button_Passengers" parent="VBoxContainer3/HBoxContainer5" instance=ExtResource("3_3rfnk")]
-custom_minimum_size = Vector2(80, 35)
-layout_mode = 2
-size_flags_horizontal = 3
-text = ""
-myLabel = "NORMAL"
-myColor = 13
-
-[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer3"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="Button_Officers" parent="VBoxContainer3/HBoxContainer3" instance=ExtResource("3_3rfnk")]
-custom_minimum_size = Vector2(80, 30)
-layout_mode = 2
-size_flags_horizontal = 3
-text = "7      "
-myColor = 15
-
-[node name="Button_Crew" parent="VBoxContainer3/HBoxContainer3" instance=ExtResource("3_3rfnk")]
-custom_minimum_size = Vector2(80, 30)
-layout_mode = 2
-size_flags_horizontal = 3
-text = "4       "
-myColor = 14
-
-[node name="Button_Passengers" parent="VBoxContainer3/HBoxContainer3" instance=ExtResource("3_3rfnk")]
-custom_minimum_size = Vector2(80, 30)
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_styles/normal = SubResource("StyleBoxFlat_g6uoe")
-theme_override_styles/hover = SubResource("StyleBoxFlat_qs14j")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_7yew6")
-text = "0        "
-myColor = 13
+offset_top = 29.0
+offset_bottom = 239.0
 
 [node name="Control2" parent="." instance=ExtResource("9_bgxv3")]
 layout_mode = 0

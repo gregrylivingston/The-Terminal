@@ -1,9 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://dgfp8be1vulnn"]
+[gd_scene load_steps=5 format=3 uid="uid://dgfp8be1vulnn"]
 
 [ext_resource type="Script" path="res://script/dropdown.gd" id="1_yjcex"]
 [ext_resource type="PackedScene" uid="uid://bwoiqnp6pp5rd" path="res://scene/button_s.tscn" id="2_687i1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hvnr8"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cmg6m"]
 bg_color = Color(0, 0, 0, 1)
 
 [node name="dropdown" type="Control"]
@@ -24,12 +27,14 @@ grow_vertical = 2
 
 [node name="Panel" type="Button" parent="."]
 self_modulate = Color(0, 0, 0, 1)
+z_index = 1
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 8.0
 grow_horizontal = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_hvnr8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cmg6m")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
 layout_mode = 1

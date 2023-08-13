@@ -1,5 +1,5 @@
 51fe1a865051a477b22d649c4e95e5d4
-::res://::1691940359
+::res://::1691969060
 ::res://addons/::1691713499
 ::res://addons/dialogue_manager/::1691713501
 constants.gd::GDScript::-1::1691713500::0::1::::<>Node<>::
@@ -58,29 +58,34 @@ question_10_whoAreYou.dialogue::Resource::1543130272802675100::1691772506::16918
 request_5_yellowAlert.dialogue::Resource::7012125225796175614::1691775215::1691852613::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
 request_10_temperature.dialogue::Resource::679750565088779073::1691772055::1691852604::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
 welcome_12_message1.dialogue::Resource::3475108350404532067::1691940452::1691940452::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
-::res://scene/::1691945507
-alert.tscn::PackedScene::2740327839438958602::1691945506::0::1::::<><>::uid://bwoiqnp6pp5rd::::res://scene/button_s.tscn
-button_s.tscn::PackedScene::3959991548336046533::1691945506::0::1::::<><>::uid://c2qygwuwhseie::::res://style/button/SBFlat_White.tres<>uid://cwn0qbqluq4pl::::res://style/button/SBFlat_White_Hover.tres<>uid://b8cfxqyixdpxl::::res://style/button/SBFlat_White_Pressed.tres<>res://script/button_s.gd<>uid://dqa4felyw5nfy::::res://sound/Cursor Rollover 1.wav
+::res://scene/::1691969038
+alert.tscn::PackedScene::2740327839438958602::1691951455::0::1::::<><>::uid://bwoiqnp6pp5rd::::res://scene/button_s.tscn
+button_s.tscn::PackedScene::3959991548336046533::1691968996::0::1::::<><>::uid://c2qygwuwhseie::::res://style/button/SBFlat_White.tres<>uid://cwn0qbqluq4pl::::res://style/button/SBFlat_White_Hover.tres<>uid://b8cfxqyixdpxl::::res://style/button/SBFlat_White_Pressed.tres<>res://script/button_s.gd<>uid://dqa4felyw5nfy::::res://sound/Cursor Rollover 1.wav
+dropdown.tscn::PackedScene::7591686747680906019::1691968996::0::1::::<><>::res://script/dropdown.gd<>uid://bwoiqnp6pp5rd::::res://scene/button_s.tscn
+menu_crewStatus.tscn::PackedScene::6111487964090013462::1691968996::0::1::::<><>::res://script/menu_crewStatus.gd<>uid://bwoiqnp6pp5rd::::res://scene/button_s.tscn<>uid://dgfp8be1vulnn::::res://scene/dropdown.tscn
 menu_lifeSupportAreas.tscn::PackedScene::1635036406686709617::1691853902::0::1::::<><>::uid://4aoufsu62u03::::res://scene/menu_lifeSupportAreaSummary.tscn
 menu_lifeSupportAreaSummary.tscn::PackedScene::2036362510654217862::1691853902::0::1::::<><>::
-scenarioChoiceButton.tscn::PackedScene::2806126999276006456::1691945507::0::1::::<><>::uid://bwoiqnp6pp5rd::::res://scene/button_s.tscn
-scenarioGenerator.tscn::PackedScene::1946851947513666740::1691945507::0::1::::<><>::res://script/scenarioGenerator.gd<>uid://bewgwcjw2lptf::::res://texture/icon/Icon_BASE.png<>uid://bwoiqnp6pp5rd::::res://scene/button_s.tscn
-system_oxygen.tscn::PackedScene::1266520112662219439::1691945506::0::1::::<><>::uid://bwoiqnp6pp5rd::::res://scene/button_s.tscn<>uid://80n71s3fle7::::res://scene/tank.tscn
-tank.tscn::PackedScene::69667327791481724::1691945506::0::1::::<><>::res://script/tank.gd
+menu_topLeftCrew.tscn::PackedScene::2098451017209830806::1691969038::0::1::::<><>::uid://bwoiqnp6pp5rd::::res://scene/button_s.tscn<>uid://ctcpkw3ko6tm1::::res://scene/menu_crewStatus.tscn
+scenarioGenerator.tscn::PackedScene::1946851947513666740::1691968996::0::1::::<><>::res://script/scenarioGenerator.gd<>uid://bewgwcjw2lptf::::res://texture/icon/Icon_BASE.png<>uid://bwoiqnp6pp5rd::::res://scene/button_s.tscn
+system_oxygen.tscn::PackedScene::1266520112662219439::1691968996::0::1::::<><>::uid://bwoiqnp6pp5rd::::res://scene/button_s.tscn<>uid://80n71s3fle7::::res://scene/tank.tscn
+tank.tscn::PackedScene::69667327791481724::1691968996::0::1::::<><>::res://script/tank.gd
 terminal.gd::GDScript::-1::1691851841::0::1::::<>ColorRect<>::
-terminal.tscn::PackedScene::8827858238738859529::1691945506::0::1::::<><>::res://scene/terminal.gd<>res://script/createColors.gd<>uid://sbrnv2ltnrjb::::res://scene/system_oxygen.tscn<>uid://bwoiqnp6pp5rd::::res://scene/button_s.tscn<>uid://j70uhkodw1hu::::res://sound/music/Tech Lab (Soft Hum) verb.mp3<>uid://dla8gki0uk1k3::::res://texture/icon/Icon_Star.png<>uid://b6ib27ifm2cqu::::res://texture/icon/Icon_Tablet.png<>uid://1ce261pps6l6::::res://texture/icon/Icon_Family.png<>uid://xka2thgerv0d::::res://scene/menu_lifeSupportAreas.tscn
-::res://script/::1691944676
-button_s.gd::GDScript::-1::1691943131::0::1::::<>Button<>::
+terminal.tscn::PackedScene::8827858238738859529::1691969009::0::1::::<><>::res://scene/terminal.gd<>res://script/createColors.gd<>uid://sbrnv2ltnrjb::::res://scene/system_oxygen.tscn<>uid://j70uhkodw1hu::::res://sound/music/Tech Lab (Soft Hum) verb.mp3<>uid://45rggagx5jny::::res://scene/menu_topLeftCrew.tscn<>uid://dla8gki0uk1k3::::res://texture/icon/Icon_Star.png<>uid://b6ib27ifm2cqu::::res://texture/icon/Icon_Tablet.png<>uid://1ce261pps6l6::::res://texture/icon/Icon_Family.png<>uid://xka2thgerv0d::::res://scene/menu_lifeSupportAreas.tscn
+::res://script/::1691968936
+button_dropdown.gd::GDScript::-1::1691955411::0::1::::<>Control<>::
+button_s.gd::GDScript::-1::1691955073::0::1::::<>Button<>::
 createColors.gd::GDScript::-1::1691618019::0::1::::<>VBoxContainer<>::
-g.gd::GDScript::-1::1691702960::0::1::::<>Node<>::
-scenarioGenerator.gd::GDScript::-1::1691944676::0::1::::<>Panel<>::
+dropdown.gd::GDScript::-1::1691968936::0::1::::<>Control<>::
+g.gd::GDScript::-1::1691953809::0::1::::<>Node<>::
+menu_crewStatus.gd::GDScript::-1::1691967912::0::1::::<>HBoxContainer<>::
+scenarioGenerator.gd::GDScript::-1::1691966931::0::1::::<>Panel<>::
 tank.gd::GDScript::-1::1691631160::0::1::::<>Button<>::
 ::res://script/class/::1691702864
 character.gd::GDScript::-1::1691702864::0::1::::Character<>Resource<>::
-::res://script/global/::1691938580
+::res://script/global/::1691955597
 gAlert.gd::GDScript::-1::1691938580::0::1::::<>Node<>::
-gFacility.gd::GDScript::-1::1691937215::0::1::::<>Node<>::
-gScenario.gd::GDScript::-1::1691861817::0::1::::<>Node<>::
+gFacility.gd::GDScript::-1::1691955586::0::1::::<>Node<>::
+gScenario.gd::GDScript::-1::1691955597::0::1::::<>Node<>::
 names.gd::GDScript::-1::1691689941::0::1::::<>Node<>::
 ::res://sound/::1691668803
 Btn.wav::AudioStreamWAV::3857441284992195291::1691617811::1691668803::1::::<><>::
