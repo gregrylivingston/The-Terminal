@@ -1,9 +1,9 @@
+HSeparator
 TextureRect
 HBoxContainer
 RichTextLabel
 Label
 VBoxContainer
-HSeparator
 GridContainer
 FlowContainer
 Panel

@@ -177,6 +177,10 @@ text = ""
 myLabel = "CPULOAD"
 myColor = 2
 
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer3"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
 [node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer3"]
 layout_mode = 2
 size_flags_vertical = 0

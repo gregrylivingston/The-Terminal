@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://bprmr582e5o72"
+path="res://.godot/imported/welcome_12_message1.dialogue-7f74cdabc660aad3851a1a2251df6ae1.tres"
+
+[deps]
+
+source_file="res://dialogue/welcome_12_message1.dialogue"
+dest_files=["res://.godot/imported/welcome_12_message1.dialogue-7f74cdabc660aad3851a1a2251df6ae1.tres"]
+
+[params]
+
+defaults=true

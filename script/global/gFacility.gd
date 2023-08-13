@@ -5,6 +5,7 @@ enum facilitySize { TINY , SMALL , MEDIUM, LARGE, VERY_LARGE, GIANT }
 
 var myType
 var myFacilitySize 
+var myFacilityName
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

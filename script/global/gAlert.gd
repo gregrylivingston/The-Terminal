@@ -7,13 +7,18 @@ var alertVbox
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
+
 
 func startAlerts():
+	createAlert("welcome_12_message1")
+
+
+func introAlerts():
 	createAlert("question_10_whoAreYou")
 	createAlert("request_10_temperature")
 	createAlert("request_5_yellowAlert")
-	createAlert("anomaly_5_fight")
+	createAlert("anomaly_5_fight")	
 
 
 

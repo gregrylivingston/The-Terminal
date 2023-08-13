@@ -46,7 +46,8 @@ func saveFacilitySize(choice):
 	
 func loadProposedScenario():
 	$summary.visible = true
-	$summary/Label_FacilityName.text = "[i]" + shipNames[gFacility.myType][gScenario.myScenarioType][0] + "[/i]"
+	gFacility.myFacilityName = "[i]" + shipNames[gFacility.myType][gScenario.myScenarioType][0] + "[/i]"
+	$summary/Label_FacilityName.text = gFacility.myFacilityName
 	$summary/HBox1/Label_FacilityType.text = gFacility.myType.replace("_"," ")
 	$summary/HBox1/Icon_FacilityType.texture = load("res://texture/icon/Icon_"+gFacility.myType+".png")
 	$summary/HBox2/Label.text = gScenario.myScenarioLocation.replace("_"," ")
