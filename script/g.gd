@@ -9,6 +9,12 @@ paleturquoise, aquamarine, turquoise,
 skyblue, deepskyblue, 
 mediumorchid, darkorchid}
 
+var colorMap = {
+	"SHIP":7,"STATION":12,"BASE":4,
+	"EARTH_SYSTEM":12,"SOLAR_SYSTEM":6,"DISTANT_STAR":6,"ANOTHER_DIMENSION":0,
+	"EXPLORATION":14,"TRADE":11,"SCIENCE":12,"MILITARY":0,"EXTRACTION":4,"TOURISM":9,
+}
+
 enum characterClass { OFFICER , CREWMEMBER , PASSENGER , STOWAWAY, ROBOT, ALIEN }
 enum characterProfession { CAPTAIN , ENGINEER , DOCTOR , MAINTENANCE}
 

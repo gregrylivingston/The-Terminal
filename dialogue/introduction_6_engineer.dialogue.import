@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://clfgob8y14hqg"
+path="res://.godot/imported/introduction_6_engineer.dialogue-16db09eb38c7ddfad5ddfb08851a8ac6.tres"
+
+[deps]
+
+source_file="res://dialogue/introduction_6_engineer.dialogue"
+dest_files=["res://.godot/imported/introduction_6_engineer.dialogue-16db09eb38c7ddfad5ddfb08851a8ac6.tres"]
+
+[params]
+
+defaults=true

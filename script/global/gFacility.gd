@@ -3,9 +3,9 @@ extends Node
 enum facilityType { STATION , SHIP , BASE }
 enum facilitySize { TINY , SMALL , MEDIUM, LARGE, VERY_LARGE, GIANT }
 
-var myType
-var myFacilitySize 
-var myFacilityName
+var myType = "BASE"
+var myFacilitySize = "TINY"
+var myFacilityName = "HELLO WORLD"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

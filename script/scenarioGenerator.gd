@@ -1,51 +1,61 @@
 extends Panel
 
-var scenarioChoiceButton = preload("res://scene/scenarioChoiceButton.tscn")
+var scenarioChoiceButton = preload("res://scene/dropdown.tscn")
 var colorMap = {
 	"SHIP":7,"STATION":12,"BASE":4,
 	"EARTH_SYSTEM":12,"SOLAR_SYSTEM":6,"DISTANT_STAR":6,"ANOTHER_DIMENSION":0,
 	"EXPLORATION":14,"TRADE":11,"SCIENCE":12,"MILITARY":0,"EXTRACTION":4,"TOURISM":9,
 }
+var button_facilityType
+var button_scenarioLocation
+var button_scenarioType
+var button_facilitySize
+
 
 func beginGame():
 	get_tree().change_scene_to_file("res://scene/terminal.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$summary.visible = false
-	showFacilityTypes()
+	#$summary.visible = false
 	$summary/Button_S.connect("pressed",beginGame)
 
-func showFacilityTypes():
-	for i in gFacility.facilityType:
-		createScenarioButton(i, "res://texture/icon/Icon_"+i+".png").get_node("Button_S").connect("pressed",saveFacilityType.bind(i))
+	button_facilityType = createScenarioButton("BASE")
 
-func saveFacilityType(choice):
-	print(choice)
-	gFacility.myType = choice
-	for child in $GridContainer.get_children():child.queue_free()
-	for i in gScenario.scenarioLocation:
-		createScenarioButton(i, "res://texture/icon/Icon_"+i+".png").get_node("Button_S").connect("pressed",saveScenarioLocation.bind(i))
+	$VBox/HBox/VBox1.add_child(button_facilityType)
+	for i in gFacility.facilityType:button_facilityType.addOption(i)
+
+	button_scenarioLocation = createScenarioButton("EARTH_SYSTEM")
+	$VBox/HBox/VBox2.add_child(button_scenarioLocation)
+	for i in gScenario.scenarioLocation:button_scenarioLocation.addOption(i)
 	
-func saveScenarioLocation(choice):
-	gScenario.myScenarioLocation = choice
-	for child in $GridContainer.get_children():child.queue_free()
-	for i in gScenario.scenarioType:
-		createScenarioButton(i, "res://texture/icon/Icon_"+i+".png").get_node("Button_S").connect("pressed",saveScenarioType.bind(i))
+	button_scenarioType = createScenarioButton("SCIENCE")
+	$VBox/HBox/VBox3.add_child(button_scenarioType)
+	for i in gScenario.scenarioType:button_scenarioType.addOption(i)
 
-func saveScenarioType(choice):
-	gScenario.myScenarioType = choice
-	for child in $GridContainer.get_children():child.queue_free()
-	for i in gFacility.facilitySize:
-		createScenarioButton(i, "res://texture/icon/Icon_"+i+".png").get_node("Button_S").connect("pressed",saveFacilitySize.bind(i))
+	button_facilitySize = createScenarioButton("TINY")
+	$VBox/HBox/VBox4.add_child(button_facilitySize)
+	for i in gFacility.facilitySize:button_facilitySize.addOption(i)
+
+	button_facilityType.connect("newSelection" , loadProposedScenario)
+	button_scenarioLocation.connect("newSelection" , loadProposedScenario)
+	button_scenarioType.connect("newSelection" , loadProposedScenario)
+	button_facilitySize.connect("newSelection" , loadProposedScenario)
+
+#		createScenarioButton(i, "res://texture/icon/Icon_"+i+".png").get_node("Button_S").connect("pressed",saveFacilitySize.bind(i))
 
 func saveFacilitySize(choice):
 	gFacility.myFacilitySize = choice
-	for child in $GridContainer.get_children():child.queue_free()
+
 	loadProposedScenario()
 	
 func loadProposedScenario():
-	$summary.visible = true
+	
+	gFacility.myType = button_facilityType.selectedOption
+	gScenario.myScenarioLocation = button_scenarioLocation.selectedOption
+	gScenario.myScenarioType = button_scenarioType.selectedOption
+	gFacility.myFacilitySize = button_facilitySize.selectedOption
+
 	gFacility.myFacilityName = "[i]" + shipNames[gFacility.myType][gScenario.myScenarioType][0] + "[/i]"
 	$summary/Label_FacilityName.text = gFacility.myFacilityName
 	$summary/HBox1/Label_FacilityType.text = gFacility.myType.replace("_"," ")
@@ -58,14 +68,9 @@ func loadProposedScenario():
 	$summary/HBox4/Icon.texture = load("res://texture/icon/Icon_"+gFacility.myFacilitySize+".png")
 
 
-func createScenarioButton(title, texture):
+func createScenarioButton(title):
 	var newButton = scenarioChoiceButton.instantiate()
-	newButton.get_node("Button_S").myLabel = str(title).replace("_"," ")
-	newButton.get_node("TextureRect").texture = load(texture)
-	if colorMap.has(title):
-		newButton.get_node("Button_S").myColor = colorMap[title]
-		newButton.get_node("TextureRect").modulate = G.colors.find_key(colorMap[title])
-	$GridContainer.add_child(newButton)
+	newButton.selectedOption = title
 	return newButton
 
 

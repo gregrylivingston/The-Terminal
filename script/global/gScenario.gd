@@ -3,8 +3,8 @@ extends Node
 enum scenarioType { EXPLORATION , EXTRACTION , MILITARY , SCIENCE , TOURISM , TRADE }
 enum scenarioLocation { EARTH_SYSTEM , SOLAR_SYSTEM , DISTANT_STAR , GALAXY , UNIVERSE, ALTERNATE_DIMENSION}
 
-var myScenarioType
-var myScenarioLocation
+var myScenarioType = "EXPLORATION"
+var myScenarioLocation = "EARTH_SYSTEM"
 
 
 # Called when the node enters the scene tree for the first time.

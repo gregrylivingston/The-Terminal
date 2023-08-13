@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bwoiqnp6pp5rd" path="res://scene/button_s.tscn" id="1_upi8x"]
 [ext_resource type="PackedScene" uid="uid://80n71s3fle7" path="res://scene/tank.tscn" id="2_qhvk3"]
 
-[node name="Control" type="Control"]
+[node name="Control2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

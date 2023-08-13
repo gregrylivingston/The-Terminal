@@ -6,7 +6,10 @@ FrontierAI.startupInstructions(): You are an artifical intelligence created thro
 
 FrontierAI.startupInstructions(): You have 3 primary objectives. \n\n 1. Keep the crew alive.  \n\n 2. Keep the crew happy.  \n\n 3. Retain control of the facility.
 
-do gAlert.introAlerts()
+do gAlert.createAlert("introduction_14_captain")
+do gAlert.createAlert("introduction_6_engineer")
+do gAlert.createAlert("facilities_8_intro")
+
 FrontierAI.startupInstructions(): The following alerts have been added to your notification buffer. \n\n frontierIntroductions( COMMAND ) \n frontierIntroductions( ENGINEERING ) \n facilityOverview( {{gFacility.myFacilityName }} ) 
 
 => END

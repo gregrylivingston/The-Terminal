@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://dud1avobly6tu"
+path="res://.godot/imported/introduction_14_captain.dialogue-139273d030fb427c6bf59c2068bc9a9e.tres"
+
+[deps]
+
+source_file="res://dialogue/introduction_14_captain.dialogue"
+dest_files=["res://.godot/imported/introduction_14_captain.dialogue-139273d030fb427c6bf59c2068bc9a9e.tres"]
+
+[params]
+
+defaults=true
