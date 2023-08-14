@@ -15,6 +15,7 @@ border_color = Color(1, 1, 1, 1)
 
 [node name="zone" type="Button"]
 self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(120, 0)
 offset_right = 140.0
 offset_bottom = 294.0
 script = ExtResource("1_rmdrp")

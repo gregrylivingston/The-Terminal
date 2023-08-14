@@ -49,6 +49,9 @@ func saveFacilitySize(choice):
 
 	loadProposedScenario()
 	
+	
+	
+var facilityDiagram = preload("res://scene/facility/facility.tscn")
 func loadProposedScenario():
 	
 	gFacility.myType = button_facilityType.selectedOption
@@ -58,14 +61,14 @@ func loadProposedScenario():
 
 	gFacility.myFacilityName =  shipNames[gFacility.myType][gScenario.myScenarioType][ randi_range(0,shipNames[gFacility.myType][gScenario.myScenarioType].size()-1)] 
 	$summary/Label_FacilityName.text = "[i]" + gFacility.myFacilityName.to_upper() + "[/i]"
-	$summary/HBox1/Label_FacilityType.text = gFacility.myType.replace("_"," ")
-	$summary/HBox1/Icon_FacilityType.texture = load("res://texture/icon/Icon_"+gFacility.myType+".png")
-	$summary/HBox2/Label.text = gScenario.myScenarioLocation.replace("_"," ")
-	$summary/HBox2/Icon.texture = load("res://texture/icon/Icon_"+gScenario.myScenarioLocation+".png")
-	$summary/HBox3/Label.text = gScenario.myScenarioType.replace("_"," ")
-	$summary/HBox3/Icon.texture = load("res://texture/icon/Icon_"+gScenario.myScenarioType+".png")
-	$summary/HBox4/Label.text = gFacility.myFacilitySize.replace("_"," ")
-	$summary/HBox4/Icon.texture = load("res://texture/icon/Icon_"+gFacility.myFacilitySize+".png")
+
+	gFacility.createMyZones()
+	for i in $summary/facility.get_children():i.queue_free()
+	var newFacility = facilityDiagram.instantiate()
+	$summary/facility.add_child(newFacility)
+	
+
+
 
 
 func createScenarioButton(title):

@@ -30,6 +30,7 @@ func _ready():
 	shipPanel.add_theme_stylebox_override("panel" , myStylebox)
 
 	$VBox/Label.text = "[b]" + zoneTitle + "[/b]"
+	
 
 
 func setupAlarm(node , alarmStateEnum , state):

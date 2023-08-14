@@ -11,9 +11,10 @@ border_width_bottom = 1
 
 [node name="airlock" type="Button"]
 z_index = 1
+custom_minimum_size = Vector2(30, 20)
 offset_top = 72.0
-offset_right = 93.0
-offset_bottom = 108.0
+offset_right = 30.0
+offset_bottom = 92.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_qbu7y")
 script = ExtResource("1_qowm5")
 
