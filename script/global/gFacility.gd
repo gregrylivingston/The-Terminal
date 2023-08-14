@@ -3,7 +3,7 @@ extends Node
 enum facilityType {  SHIP , STATION , BASE }
 enum facilitySize { TINY ,  SMALL , MEDIUM , LARGE }
 
-var myType = "BASE"
+var myType = "SHIP"
 var myFacilitySize = "TINY"
 var myFacilityName = "HELLO WORLD"
 

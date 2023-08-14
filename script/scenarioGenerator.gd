@@ -18,40 +18,54 @@ func _ready():
 	
 	#$summary.visible = false
 	$summary/Button_S.connect("pressed",beginGame)
+	$VBox/HBox/Button_S.connect("pressed" , randomizeScenario)
 
-	button_facilityType = createScenarioButton("BASE")
+	randomizeScenario()
+	
 
+#		createScenarioButton(i, "res://texture/icon/Icon_"+i+".png").get_node("Button_S").connect("pressed",saveFacilitySize.bind(i))
+
+func loadDropdowns():
+	for i in [$VBox/HBox/VBox1 , $VBox/HBox/VBox2, $VBox/HBox/VBox3, $VBox/HBox/VBox4]:
+		for child in i.get_children():child.queue_free()
+	
+	button_facilityType = createScenarioButton(gFacility.facilityType.find_key(gFacility.myType))
 	$VBox/HBox/VBox1.add_child(button_facilityType)
 	for i in gFacility.facilityType:button_facilityType.addOption(i)
 
-	button_scenarioLocation = createScenarioButton("EARTH_SYSTEM")
+	button_scenarioLocation = createScenarioButton(gScenario.scenarioLocation.find_key(gScenario.myScenarioLocation))
 	$VBox/HBox/VBox2.add_child(button_scenarioLocation)
 	for i in gScenario.scenarioLocation:button_scenarioLocation.addOption(i)
 	
-	button_scenarioType = createScenarioButton("SCIENCE")
+	button_scenarioType = createScenarioButton(gScenario.scenarioType.find_key(gScenario.myScenarioType))
 	$VBox/HBox/VBox3.add_child(button_scenarioType)
 	for i in gScenario.scenarioType:button_scenarioType.addOption(i)
 
-	button_facilitySize = createScenarioButton("TINY")
+	button_facilitySize = createScenarioButton(gFacility.facilitySize.find_key(gFacility.myFacilitySize))
 	$VBox/HBox/VBox4.add_child(button_facilitySize)
 	for i in gFacility.facilitySize:button_facilitySize.addOption(i)
 
-	button_facilityType.connect("newSelection" , loadProposedScenario)
-	button_scenarioLocation.connect("newSelection" , loadProposedScenario)
-	button_scenarioType.connect("newSelection" , loadProposedScenario)
-	button_facilitySize.connect("newSelection" , loadProposedScenario)
 
-	loadProposedScenario()
-#		createScenarioButton(i, "res://texture/icon/Icon_"+i+".png").get_node("Button_S").connect("pressed",saveFacilitySize.bind(i))
-
+	for i in [button_facilityType , button_scenarioLocation, button_scenarioType, button_facilitySize]:
+		i.connect("newSelection" , loadProposedScenario)
+		i.size_flags_vertical = SIZE_EXPAND_FILL
+		
 func saveFacilitySize(choice):
 	gFacility.myFacilitySize = choice
-
 	loadProposedScenario()
 	
-	
+
+func randomizeScenario():
+	gFacility.myType = randi_range(0 , gFacility.facilityType.size() - 1)
+	gFacility.myFacilitySize = randi_range(0 , gFacility.facilitySize.size() - 1)
+	gScenario.myScenarioType = randi_range(0 , gScenario.scenarioType.size() -1)
+	gScenario.myScenarioLocation = randi_range(0 , gScenario.scenarioLocation.size() - 1)
+	loadDropdowns()
+	loadProposedScenario()
 	
 var facilityDiagram = preload("res://scene/facility/facility.tscn")
+
+
 func loadProposedScenario():
 	
 	gFacility.myType = button_facilityType.selectedOption

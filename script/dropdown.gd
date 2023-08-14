@@ -40,6 +40,7 @@ func addOptionButton( title ):
 func selectOption(selection):
 	selectedOption = selection
 	setupButton($Button_S , selection)
+	showingDropdown = false
 	dropdownPanel.queue_free()
 	emit_signal("newSelection")
 
@@ -51,9 +52,16 @@ func showOptions():
 	G.terminalNode.add_child(dropdownPanel)
 	dropdownPanel.size.x = size.x
 	dropdownPanel.position = get_screen_position()
+	showingDropdown = true
 
 
+var showingDropdown = false
 	
 func hideOptions():
 	if not Rect2(dropdownPanel.get_global_rect()).has_point(get_global_mouse_position()):
+		for i in get_tree().get_nodes_in_group("dropdown"): i.freeDropdown()
+		
+func freeDropdown():
+	if showingDropdown == true: 
+		showingDropdown = false
 		dropdownPanel.queue_free()

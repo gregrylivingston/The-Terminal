@@ -13,3 +13,5 @@ res://scene/facility/airlock.gd
 res://script/scenarioGenerator.gd
 res://scene/facility/facility.gd
 res://scene/facility/zone.gd
+res://script/dropdown.gd
+res://script/global/gScenario.gd
