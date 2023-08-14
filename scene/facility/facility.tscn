@@ -7,13 +7,14 @@
 [node name="facility" type="HBoxContainer"]
 offset_right = 514.0
 offset_bottom = 301.0
-theme_override_constants/separation = -1
+theme_override_constants/separation = -5
 script = ExtResource("1_mf4w3")
 
 [node name="zone" parent="." instance=ExtResource("2_ekw5g")]
 custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
 size_flags_vertical = 4
+zoneTitle = "ENG"
 
 [node name="airlock" parent="." instance=ExtResource("3_s1jqd")]
 custom_minimum_size = Vector2(30, 10)
@@ -21,9 +22,10 @@ layout_mode = 2
 size_flags_vertical = 4
 
 [node name="zone2" parent="." instance=ExtResource("2_ekw5g")]
-custom_minimum_size = Vector2(100, 50)
+custom_minimum_size = Vector2(100, 20)
 layout_mode = 2
 size_flags_vertical = 4
+zoneTitle = "HAB"
 
 [node name="airlock2" parent="." instance=ExtResource("3_s1jqd")]
 custom_minimum_size = Vector2(30, 10)
@@ -34,3 +36,10 @@ size_flags_vertical = 4
 custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
 size_flags_vertical = 4
+zoneTitle = "BRIDGE"
+corner_radius = {
+"bottom_left": 0,
+"bottom_right": 50,
+"top_left": 0,
+"top_right": 50
+}

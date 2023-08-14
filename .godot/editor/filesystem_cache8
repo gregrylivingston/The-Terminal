@@ -1,5 +1,5 @@
 51fe1a865051a477b22d649c4e95e5d4
-::res://::1691971133
+::res://::1692030185
 ::res://addons/::1691713499
 ::res://addons/dialogue_manager/::1691713501
 constants.gd::GDScript::-1::1691713500::0::1::::<>Node<>::
@@ -60,25 +60,32 @@ request_5_yellowAlert.dialogue::Resource::7012125225796175614::1691775215::16918
 request_10_droneDataAnalysis.dialogue::Resource::4731091827133565262::1691969659::1691969659::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
 request_10_temperature.dialogue::Resource::679750565088779073::1691772055::1691852604::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
 welcome_12_message1.dialogue::Resource::3475108350404532067::1691940452::1691940452::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
-::res://scene/::1691972590
+::res://scene/::1692021726
 alert.tscn::PackedScene::2740327839438958602::1691951455::0::1::::<><>::uid://bwoiqnp6pp5rd
-button_s.tscn::PackedScene::3959991548336046533::1691972589::0::1::::<><>::uid://c2qygwuwhseie::::res://style/button/SBFlat_White.tres<>uid://cwn0qbqluq4pl::::res://style/button/SBFlat_White_Hover.tres<>uid://b8cfxqyixdpxl::::res://style/button/SBFlat_White_Pressed.tres<>res://script/button_s.gd<>uid://dqa4felyw5nfy::::res://sound/Cursor Rollover 1.wav
-dropdown.tscn::PackedScene::7591686747680906019::1691972589::0::1::::<><>::res://script/dropdown.gd<>uid://bwoiqnp6pp5rd::::res://scene/button_s.tscn
+button_s.tscn::PackedScene::3959991548336046533::1692021726::0::1::::<><>::uid://c2qygwuwhseie::::res://style/button/SBFlat_White.tres<>uid://cwn0qbqluq4pl::::res://style/button/SBFlat_White_Hover.tres<>uid://b8cfxqyixdpxl::::res://style/button/SBFlat_White_Pressed.tres<>res://script/button_s.gd<>uid://dqa4felyw5nfy::::res://sound/Cursor Rollover 1.wav
+dropdown.tscn::PackedScene::7591686747680906019::1692021726::0::1::::<><>::res://script/dropdown.gd<>uid://bwoiqnp6pp5rd::::res://scene/button_s.tscn
 dropdownPanel.tscn::PackedScene::4277730043560921492::1691970789::0::1::::<><>::
 menu_crewStatus.tscn::PackedScene::6111487964090013462::1691972589::0::1::::<><>::res://script/menu_crewStatus.gd<>uid://dgfp8be1vulnn::::res://scene/dropdown.tscn
 menu_lifeSupportAreas.tscn::PackedScene::1635036406686709617::1691853902::0::1::::<><>::uid://4aoufsu62u03
 menu_lifeSupportAreaSummary.tscn::PackedScene::2036362510654217862::1691853902::0::1::::<><>::
-menu_topLeftCrew.tscn::PackedScene::2098451017209830806::1691972590::0::1::::<><>::uid://bwoiqnp6pp5rd::::res://scene/button_s.tscn<>res://script/menu_topLeftCrew.gd<>uid://ctcpkw3ko6tm1::::res://scene/menu_crewStatus.tscn<>uid://dgfp8be1vulnn::::res://scene/dropdown.tscn
-scenarioGenerator.tscn::PackedScene::1946851947513666740::1691972589::0::1::::<><>::res://script/scenarioGenerator.gd<>uid://bewgwcjw2lptf::::res://texture/icon/Icon_BASE.png<>uid://bwoiqnp6pp5rd::::res://scene/button_s.tscn
-system_oxygen.tscn::PackedScene::1266520112662219439::1691972589::0::1::::<><>::uid://bwoiqnp6pp5rd::::res://scene/button_s.tscn<>uid://80n71s3fle7::::res://scene/tank.tscn
-tank.tscn::PackedScene::69667327791481724::1691972589::0::1::::<><>::res://script/tank.gd
+menu_topLeftCrew.tscn::PackedScene::2098451017209830806::1692021726::0::1::::<><>::uid://bwoiqnp6pp5rd::::res://scene/button_s.tscn<>res://script/menu_topLeftCrew.gd<>uid://ctcpkw3ko6tm1::::res://scene/menu_crewStatus.tscn<>uid://dgfp8be1vulnn::::res://scene/dropdown.tscn
+scenarioGenerator.tscn::PackedScene::1946851947513666740::1692021726::0::1::::<><>::res://script/scenarioGenerator.gd<>uid://bewgwcjw2lptf::::res://texture/icon/Icon_BASE.png<>uid://bwoiqnp6pp5rd::::res://scene/button_s.tscn<>uid://k8ch8byk5mbw::::res://scene/facility/facility.tscn
+system_oxygen.tscn::PackedScene::1266520112662219439::1692021726::0::1::::<><>::uid://bwoiqnp6pp5rd::::res://scene/button_s.tscn<>uid://80n71s3fle7::::res://scene/tank.tscn
+tank.tscn::PackedScene::69667327791481724::1692021726::0::1::::<><>::res://script/tank.gd
 terminal.gd::GDScript::-1::1691971210::0::1::::<>ColorRect<>::
-terminal.tscn::PackedScene::8827858238738859529::1691972589::0::1::::<><>::res://scene/terminal.gd<>res://script/createColors.gd<>uid://sbrnv2ltnrjb::::res://scene/system_oxygen.tscn<>uid://j70uhkodw1hu::::res://sound/music/Tech Lab (Soft Hum) verb.mp3<>uid://45rggagx5jny::::res://scene/menu_topLeftCrew.tscn<>uid://dla8gki0uk1k3::::res://texture/icon/Icon_Star.png<>uid://b6ib27ifm2cqu::::res://texture/icon/Icon_Tablet.png<>uid://1ce261pps6l6::::res://texture/icon/Icon_Family.png<>uid://xka2thgerv0d::::res://scene/menu_lifeSupportAreas.tscn
-::res://script/::1691972158
+terminal.tscn::PackedScene::8827858238738859529::1692021726::0::1::::<><>::res://scene/terminal.gd<>res://script/createColors.gd<>uid://sbrnv2ltnrjb::::res://scene/system_oxygen.tscn<>uid://j70uhkodw1hu::::res://sound/music/Tech Lab (Soft Hum) verb.mp3<>uid://45rggagx5jny::::res://scene/menu_topLeftCrew.tscn<>uid://dla8gki0uk1k3::::res://texture/icon/Icon_Star.png<>uid://b6ib27ifm2cqu::::res://texture/icon/Icon_Tablet.png<>uid://1ce261pps6l6::::res://texture/icon/Icon_Family.png<>uid://xka2thgerv0d::::res://scene/menu_lifeSupportAreas.tscn<>uid://k8ch8byk5mbw::::res://scene/facility/facility.tscn
+::res://scene/facility/::1692021726
+airlock.gd::GDScript::-1::1691975211::0::1::::<>Button<>::
+airlock.tscn::PackedScene::4897875082197121895::1692021726::0::1::::<><>::res://scene/facility/airlock.gd
+facility.gd::GDScript::-1::1691972692::0::1::::<>HBoxContainer<>::
+facility.tscn::PackedScene::770148572727529400::1692021726::0::1::::<><>::res://scene/facility/facility.gd<>uid://deqex2lyq07i5::::res://scene/facility/zone.tscn<>uid://cb1tj0134akwd::::res://scene/facility/airlock.tscn
+zone.gd::GDScript::-1::1692021721::0::1::::<>Button<>::
+zone.tscn::PackedScene::7473332847163421494::1692021726::0::1::::<><>::uid://b6ib27ifm2cqu::::res://texture/icon/Icon_Tablet.png<>res://scene/facility/zone.gd<>uid://bwoiqnp6pp5rd::::res://scene/button_s.tscn<>uid://dgfp8be1vulnn::::res://scene/dropdown.tscn
+::res://script/::1692021721
 button_dropdown.gd::GDScript::-1::1691955411::0::1::::<>Control<>::
-button_s.gd::GDScript::-1::1691955073::0::1::::<>Button<>::
+button_s.gd::GDScript::-1::1692021518::0::1::::<>Button<>::
 createColors.gd::GDScript::-1::1691618019::0::1::::<>VBoxContainer<>::
-dropdown.gd::GDScript::-1::1691971865::0::1::::<>Control<>::
+dropdown.gd::GDScript::-1::1692021721::0::1::::<>Control<>::
 g.gd::GDScript::-1::1691972095::0::1::::<>Node<>::
 menu_crewStatus.gd::GDScript::-1::1691971971::0::1::::<>HBoxContainer<>::
 menu_topLeftCrew.gd::GDScript::-1::1691972158::0::1::::<>VBoxContainer<>::
@@ -119,7 +126,10 @@ SBFlat_White.tres::StyleBoxFlat::6702439299687294948::1691609844::0::1::::<><>::
 SBFlat_White_Hover.tres::StyleBoxFlat::6345379413514731677::1691610122::0::1::::<><>::
 SBFlat_White_Pressed.tres::StyleBoxFlat::4707126815323197661::1691610215::0::1::::<><>::
 ::res://texture/::1691668816
-::res://texture/icon/::1691859975
+::res://texture/icon/::1692019902
+cloud-haze-fill.svg::CompressedTexture2D::7090756823923864359::1692019880::1692019902::1::::<><>::
+cloud-haze.svg::CompressedTexture2D::420316260005234225::1692019876::1692019902::1::::<><>::
+fire.svg::CompressedTexture2D::5357316893097237926::1692019883::1692019902::1::::<><>::
 Icon_Arrow.png::CompressedTexture2D::6435624415339845811::1691668841::1691668841::1::::<><>::
 Icon_BASE.png::CompressedTexture2D::2712996078243102927::1691855576::1691857570::1::::<><>::
 Icon_ChatBubble.png::CompressedTexture2D::6071721977112822438::1691668841::1691668841::1::::<><>::
@@ -139,3 +149,7 @@ Icon_Tablet.png::CompressedTexture2D::4578900485282698996::1691668841::169166884
 Icon_TextBubble.png::CompressedTexture2D::5183541272222141385::1691668841::1691668841::1::::<><>::
 Icon_TOURISM.png::CompressedTexture2D::5742807331287321900::1691859975::1691859975::1::::<><>::
 Icon_TRADE.png::CompressedTexture2D::3135859407410303832::1691859494::1691859494::1::::<><>::
+thermometer-half.svg::CompressedTexture2D::3547761346460660937::1692019893::1692019902::1::::<><>::
+thermometer-high.svg::CompressedTexture2D::2332414237527206970::1692019897::1692019902::1::::<><>::
+thermometer-low.svg::CompressedTexture2D::2359322909269259022::1692019901::1692019902::1::::<><>::
+thermometer.svg::CompressedTexture2D::4494076263771695622::1692019888::1692019902::1::::<><>::

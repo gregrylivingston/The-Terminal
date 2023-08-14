@@ -10,6 +10,7 @@ signal dropdownClosed
 var dropdownPanel
 var dropdownPanelScene = preload("res://scene/dropdownPanel.tscn")
 var options = []
+@export var showIcon = true
 
 func _ready():
 	setupButton($Button_S , selectedOption)
@@ -19,7 +20,7 @@ func _ready():
 	
 func setupButton(button, title):
 	button.myLabel = title
-	button.myIcon = title
+	if showIcon:	button.addIcon(title)
 	if G.colorMap.has(title):
 		button.myColor = G.colorMap[title]
 	button.setupButtonStyle()

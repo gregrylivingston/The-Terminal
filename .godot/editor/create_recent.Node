@@ -1,10 +1,10 @@
+HBoxContainer
 Panel
 TextureRect
 RichTextLabel
 Label
 VBoxContainer
 Button
-HBoxContainer
 PopupMenu
 Control
 HSeparator

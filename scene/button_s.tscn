@@ -7,7 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://dqa4felyw5nfy" path="res://sound/Cursor Rollover 1.wav" id="5_pxinx"]
 
 [node name="Button_S" type="Button"]
-custom_minimum_size = Vector2(0, 35)
+custom_minimum_size = Vector2(50, 35)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
@@ -26,28 +26,32 @@ stream = ExtResource("5_pxinx")
 
 [node name="VBox" type="HBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 9.0
-offset_right = -4.0
-offset_bottom = -3.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = -51.0
+offset_top = -24.0
+offset_right = -3.0
+offset_bottom = -1.0
+grow_horizontal = 0
+grow_vertical = 0
 mouse_filter = 2
 
 [node name="Label" type="Label" parent="VBox"]
 layout_mode = 2
-size_flags_horizontal = 10
+size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 16
 horizontal_alignment = 2
 vertical_alignment = 2
 
 [node name="TextureRect" type="TextureRect" parent="VBox"]
+visible = false
 modulate = Color(0, 0, 0, 1)
 layout_mode = 2
 size_flags_horizontal = 8
 mouse_filter = 2
-expand_mode = 2
-stretch_mode = 4
+expand_mode = 5
+stretch_mode = 5

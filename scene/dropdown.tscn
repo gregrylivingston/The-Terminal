@@ -12,6 +12,7 @@ offset_bottom = 35.0
 script = ExtResource("1_yjcex")
 
 [node name="Button_S" parent="." instance=ExtResource("2_687i1")]
+custom_minimum_size = Vector2(0, 0)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

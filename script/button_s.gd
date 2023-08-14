@@ -12,14 +12,16 @@ func _ready():
 
 func setupButtonStyle():
 	$VBox/Label.set_text(myLabel.replace("_"," "))
-	$VBox/TextureRect.texture = load("res://texture/icon/Icon_" + myIcon  + ".png")
 	self_modulate = G.colors.find_key(myColor)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
 
-
+func addIcon(icon , isPng = true):
+	myIcon = icon
+	if isPng == true:$VBox/TextureRect.texture = load("res://texture/icon/Icon_" + myIcon  + ".png")
+	else: $VBox/TextureRect.texture = load(myIcon)
+	$VBox/TextureRect.visible = true
+	$VBox/TextureRect.custom_minimum_size = Vector2(16,16)
+	
 func _button_hovered():
 	$AudioStreamPlayer.play()
 	

@@ -53,7 +53,8 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -716.0
+offset_top = -683.0
+offset_bottom = 33.0
 grow_horizontal = 2
 grow_vertical = 0
 color = Color(0.768627, 0.686275, 0.501961, 1)
@@ -61,32 +62,32 @@ color = Color(0.768627, 0.686275, 0.501961, 1)
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
 offset_left = -93.0
-offset_top = 272.0
+offset_top = 307.0
 offset_right = 286.0
-offset_bottom = 1003.0
+offset_bottom = 1038.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_hceqv")
 
 [node name="alertVbox" type="VBoxContainer" parent="Panel"]
 layout_mode = 0
 offset_left = 100.0
-offset_top = 19.0
+offset_top = 52.0
 offset_right = 348.0
-offset_bottom = 586.0
+offset_bottom = 619.0
 
 [node name="Panel3" type="Panel" parent="."]
 layout_mode = 2
 offset_left = -95.0
-offset_top = 182.0
+offset_top = 215.0
 offset_right = 320.0
-offset_bottom = 263.0
+offset_bottom = 296.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_hceqv")
 
 [node name="Panel2" type="Panel" parent="."]
 layout_mode = 0
 offset_left = 299.0
-offset_top = 191.0
+offset_top = 224.0
 offset_right = 1699.0
-offset_bottom = 928.0
+offset_bottom = 961.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_hceqv")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
@@ -96,8 +97,9 @@ anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -1272.0
-offset_top = 205.0
+offset_top = 238.0
 offset_right = -497.0
+offset_bottom = 33.0
 grow_horizontal = 0
 grow_vertical = 2
 
@@ -122,38 +124,37 @@ autoplay = true
 [node name="VBoxContainer3" parent="." instance=ExtResource("5_5cynd")]
 layout_mode = 0
 offset_left = 0.0
-offset_top = 29.0
+offset_top = 62.0
 offset_right = 288.0
-offset_bottom = 239.0
+offset_bottom = 272.0
 
 [node name="Control2" parent="." instance=ExtResource("9_bgxv3")]
 layout_mode = 0
-offset_left = 887.0
-offset_top = 11.0
-offset_right = 1195.0
-offset_bottom = 175.0
+offset_left = 1176.0
+offset_top = 387.0
+offset_right = 1484.0
+offset_bottom = 551.0
 
 [node name="IconStar" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(41, 214)
+position = Vector2(41, 247)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("5_mhscg")
 
 [node name="IconTablet" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(138, 214)
+position = Vector2(138, 247)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("6_1hbyq")
 
 [node name="IconTablet2" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(226, 214)
+position = Vector2(226, 247)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("7_lyv4s")
 
 [node name="facility" parent="." instance=ExtResource("10_23jac")]
 layout_mode = 0
 offset_left = 1216.0
-offset_top = 6.0
 offset_right = 1730.0
-offset_bottom = 307.0
+offset_bottom = 205.0

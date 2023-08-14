@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cb1tj0134akwd"]
+[gd_scene load_steps=3 format=3 uid="uid://cb1tj0134akwd"]
+
+[ext_resource type="Script" path="res://scene/facility/airlock.gd" id="1_qowm5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qbu7y"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -8,7 +10,11 @@ border_width_right = 1
 border_width_bottom = 1
 
 [node name="airlock" type="Button"]
+z_index = 1
 offset_top = 72.0
 offset_right = 93.0
 offset_bottom = 108.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_qbu7y")
+script = ExtResource("1_qowm5")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
