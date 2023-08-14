@@ -5,7 +5,6 @@ var airlockScene = preload("res://scene/facility/airlock.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print(gFacility.myType)
 	if gFacility.myType == gFacility.facilityType.find_key(gFacility.facilityType.STATION):addAirlock()
 	for i in gFacility.numberOfZones:	
 		var newZone = addZone()
