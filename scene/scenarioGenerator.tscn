@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://20cmqn7jwsoq"]
+[gd_scene load_steps=5 format=3 uid="uid://20cmqn7jwsoq"]
 
 [ext_resource type="Script" path="res://script/scenarioGenerator.gd" id="1_b8d3n"]
 [ext_resource type="Texture2D" uid="uid://bewgwcjw2lptf" path="res://texture/icon/Icon_BASE.png" id="2_8ep4c"]
 [ext_resource type="PackedScene" uid="uid://bwoiqnp6pp5rd" path="res://scene/button_s.tscn" id="3_wrawm"]
+[ext_resource type="PackedScene" uid="uid://k8ch8byk5mbw" path="res://scene/facility/facility.tscn" id="4_si542"]
 
 [node name="scenarioGenerator" type="Panel"]
 self_modulate = Color(0, 0, 0, 1)
@@ -173,3 +174,10 @@ size_flags_vertical = 0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
+
+[node name="facility" parent="." instance=ExtResource("4_si542")]
+layout_mode = 0
+offset_left = 457.0
+offset_top = 462.0
+offset_right = 971.0
+offset_bottom = 763.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dx1jsg7m1gudd"]
+[gd_scene load_steps=12 format=3 uid="uid://dx1jsg7m1gudd"]
 
 [ext_resource type="Script" path="res://scene/terminal.gd" id="1_3lx6c"]
 [ext_resource type="Script" path="res://script/createColors.gd" id="1_wfevw"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://b6ib27ifm2cqu" path="res://texture/icon/Icon_Tablet.png" id="6_1hbyq"]
 [ext_resource type="Texture2D" uid="uid://1ce261pps6l6" path="res://texture/icon/Icon_Family.png" id="7_lyv4s"]
 [ext_resource type="PackedScene" uid="uid://xka2thgerv0d" path="res://scene/menu_lifeSupportAreas.tscn" id="9_bgxv3"]
+[ext_resource type="PackedScene" uid="uid://k8ch8byk5mbw" path="res://scene/facility/facility.tscn" id="10_23jac"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hceqv"]
 bg_color = Color(0, 0, 0, 1)
@@ -40,10 +41,10 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.0
-offset_left = -87.0
-offset_top = 110.0
-offset_right = -87.0
-offset_bottom = 110.0
+offset_left = -212.0
+offset_top = 112.0
+offset_right = -212.0
+offset_bottom = 112.0
 grow_vertical = 1
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -127,10 +128,10 @@ offset_bottom = 239.0
 
 [node name="Control2" parent="." instance=ExtResource("9_bgxv3")]
 layout_mode = 0
-offset_left = 1189.0
-offset_top = 9.0
-offset_right = 1497.0
-offset_bottom = 173.0
+offset_left = 887.0
+offset_top = 11.0
+offset_right = 1195.0
+offset_bottom = 175.0
 
 [node name="IconStar" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 1)
@@ -149,3 +150,10 @@ modulate = Color(0, 0, 0, 1)
 position = Vector2(226, 214)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("7_lyv4s")
+
+[node name="facility" parent="." instance=ExtResource("10_23jac")]
+layout_mode = 0
+offset_left = 1216.0
+offset_top = 6.0
+offset_right = 1730.0
+offset_bottom = 307.0

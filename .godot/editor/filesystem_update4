@@ -12,3 +12,6 @@ res://scene/terminal.gd
 res://script/scenarioGenerator.gd
 res://script/menu_crewStatus.gd
 res://script/menu_topLeftCrew.gd
+res://scene/facility/facility.tscn
+res://scene/facility/airlock.tscn
+res://scene/facility/zone.tscn

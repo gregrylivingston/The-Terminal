@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=3 uid="uid://deqex2lyq07i5"]
+
+[ext_resource type="Texture2D" uid="uid://b6ib27ifm2cqu" path="res://texture/icon/Icon_Tablet.png" id="1_egq4e"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_130md"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+
+[node name="zone" type="Button"]
+self_modulate = Color(1, 1, 1, 0)
+offset_right = 140.0
+offset_bottom = 294.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="RichTextLabel" parent="VBoxContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[i]ZONEA[/i]
+O2 OK T OK
+NORMAL"
+fit_content = true
+text_direction = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
+custom_minimum_size = Vector2(50, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("1_egq4e")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Panel" type="Panel" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_130md")
+
+[node name="TextureRect2" type="TextureRect" parent="VBoxContainer"]
+custom_minimum_size = Vector2(50, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("1_egq4e")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Label2" type="RichTextLabel" parent="VBoxContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[i]ZONEA[/i]
+O2 OK T OK
+NORMAL"
+fit_content = true
+text_direction = 2
