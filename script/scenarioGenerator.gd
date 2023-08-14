@@ -17,6 +17,9 @@ func beginGame():
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
+	G.terminalNode = self
+	
 	#$summary.visible = false
 	$summary/Button_S.connect("pressed",beginGame)
 

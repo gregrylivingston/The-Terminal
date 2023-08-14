@@ -6,6 +6,8 @@ var nodes = {}
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
+	G.terminalNode = self
+	
 	gAlert.alertVbox = $Panel/alertVbox
 	gAlert.startAlerts()
 	

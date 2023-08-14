@@ -3,7 +3,9 @@ extends VBoxContainer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	$HBoxContainer4/dropdown.addOption("NORMAL")
+	$HBoxContainer4/dropdown.addOption("YELLOW")
+	$HBoxContainer4/dropdown.addOption("RED")
 
 	
 

@@ -120,7 +120,9 @@ autoplay = true
 
 [node name="VBoxContainer3" parent="." instance=ExtResource("5_5cynd")]
 layout_mode = 0
+offset_left = 0.0
 offset_top = 29.0
+offset_right = 288.0
 offset_bottom = 239.0
 
 [node name="Control2" parent="." instance=ExtResource("9_bgxv3")]

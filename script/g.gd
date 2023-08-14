@@ -1,6 +1,7 @@
 extends Node
 
 var button_s = preload("res://scene/button_s.tscn")
+var terminalNode
 
 enum colors { indianred, salmon, lightcoral,  lightsalmon,  
 sandybrown, khaki,
@@ -13,6 +14,7 @@ var colorMap = {
 	"SHIP":7,"STATION":12,"BASE":4,
 	"EARTH_SYSTEM":12,"SOLAR_SYSTEM":6,"DISTANT_STAR":6,"ANOTHER_DIMENSION":0,
 	"EXPLORATION":14,"TRADE":11,"SCIENCE":12,"MILITARY":0,"EXTRACTION":4,"TOURISM":9,
+	"NORMAL":12,"ALERT":0,"CONF":5,"STNS":5,"QTRS":8,"LCKDWN":0,"YELLOW":5,"RED":0,
 }
 
 enum characterClass { OFFICER , CREWMEMBER , PASSENGER , STOWAWAY, ROBOT, ALIEN }

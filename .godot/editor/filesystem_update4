@@ -1,9 +1,14 @@
-res://scene/menu_topLeftCrew.tscn
+res://scene/dropdown.tscn
+res://script/dropdown.gd
 res://scene/terminal.tscn
 res://scene/tank.tscn
 res://scene/system_oxygen.tscn
 res://scene/scenarioGenerator.tscn
-res://scene/dropdown.tscn
 res://scene/button_s.tscn
 res://scene/menu_crewStatus.tscn
+res://scene/menu_topLeftCrew.tscn
+res://script/g.gd
+res://scene/terminal.gd
+res://script/scenarioGenerator.gd
+res://script/menu_crewStatus.gd
 res://script/menu_topLeftCrew.gd

@@ -1,21 +1,20 @@
 extends Control
 
 @export var selectedOption: String
-@onready var dropdownList = $Panel/VBoxContainer
+#@onready var dropdownList = $Panel/VBoxContainer
 var button = preload("res://scene/button_s.tscn")
 signal newSelection
 signal dropdownOpen
 signal dropdownClosed
 
+var dropdownPanel
+var dropdownPanelScene = preload("res://scene/dropdownPanel.tscn")
+var options = []
+
 func _ready():
-#	newButton.get_node("Button_S").myLabel = str(title).replace("_"," ")
-#	newButton.get_node("Button_S").myIcon = title
-#	if colorMap.has(title):
-#		newButton.get_node("Button_S").myColor = colorMap[title]
 	setupButton($Button_S , selectedOption)
 	$Button_S.connect("mouse_entered" , showOptions)
-	$Panel.connect("mouse_exited" , hideOptions)
-	hideOptions()
+
 
 	
 func setupButton(button, title):
@@ -25,26 +24,35 @@ func setupButton(button, title):
 		button.myColor = G.colorMap[title]
 	button.setupButtonStyle()
 	
-func addOption( title ):
+func addOption(title):
+	options.push_back(title)
+	
+func addOptionButton( title ):
 	var newButton = button.instantiate()
 	setupButton(newButton , title)
 	newButton.mouse_filter = MOUSE_FILTER_PASS
-	dropdownList.add_child(newButton)
+	dropdownPanel.get_node("VBoxContainer").add_child(newButton)
 	newButton.connect("pressed" , selectOption.bind(title))
-	$Panel.size.y = $Panel/VBoxContainer.get_child_count() * 35
+	dropdownPanel.size.y = 	dropdownPanel.get_node("VBoxContainer").get_child_count() * 35
 	return newButton
 	
 func selectOption(selection):
 	selectedOption = selection
 	setupButton($Button_S , selection)
-	$Panel.visible = false
+	dropdownPanel.queue_free()
 	emit_signal("newSelection")
 
 func showOptions():
-	$Panel.visible = true
+	dropdownPanel = dropdownPanelScene.instantiate()
+	for i in options: addOptionButton(i)
 	emit_signal("dropdownOpen")
-	
+	dropdownPanel.connect("mouse_exited" , hideOptions)
+	G.terminalNode.add_child(dropdownPanel)
+	dropdownPanel.size.x = size.x
+	dropdownPanel.position = get_screen_position()
+
+
 	
 func hideOptions():
-	if not Rect2($Panel.get_global_rect()).has_point(get_global_mouse_position()):
-		$Panel.visible = false
+	if not Rect2(dropdownPanel.get_global_rect()).has_point(get_global_mouse_position()):
+		dropdownPanel.queue_free()

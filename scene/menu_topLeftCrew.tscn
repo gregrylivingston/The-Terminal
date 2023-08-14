@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://45rggagx5jny"]
+[gd_scene load_steps=8 format=3 uid="uid://45rggagx5jny"]
 
 [ext_resource type="PackedScene" uid="uid://bwoiqnp6pp5rd" path="res://scene/button_s.tscn" id="1_0kft3"]
 [ext_resource type="Script" path="res://script/menu_topLeftCrew.gd" id="1_8j2x3"]
 [ext_resource type="PackedScene" uid="uid://ctcpkw3ko6tm1" path="res://scene/menu_crewStatus.tscn" id="2_hk7xi"]
+[ext_resource type="PackedScene" uid="uid://dgfp8be1vulnn" path="res://scene/dropdown.tscn" id="3_22rxp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g6uoe"]
 bg_color = Color(1, 1, 1, 1)
@@ -71,13 +72,10 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="Button_Officers" parent="HBoxContainer4" instance=ExtResource("1_0kft3")]
-custom_minimum_size = Vector2(80, 30)
+[node name="dropdown" parent="HBoxContainer4" instance=ExtResource("3_22rxp")]
 layout_mode = 2
 size_flags_horizontal = 3
-text = ""
-myLabel = "CREW STATUS NORMAL"
-myColor = 8
+selectedOption = "NORMAL"
 
 [node name="HBoxContainer5" parent="." instance=ExtResource("2_hk7xi")]
 layout_mode = 2

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://bx073na87i8kx"
+path="res://.godot/imported/anomaly_5_communicationsError.dialogue-2ee92e1ff65c8c5f4d53d5ca8d509b99.tres"
+
+[deps]
+
+source_file="res://dialogue/anomaly_5_communicationsError.dialogue"
+dest_files=["res://.godot/imported/anomaly_5_communicationsError.dialogue-2ee92e1ff65c8c5f4d53d5ca8d509b99.tres"]
+
+[params]
+
+defaults=true
