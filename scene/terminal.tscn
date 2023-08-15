@@ -61,11 +61,12 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.0
-offset_left = 507.0
+offset_left = 581.0
 offset_top = 514.0
-offset_right = 507.0
+offset_right = 581.0
 offset_bottom = 514.0
 grow_vertical = 1
+scale = Vector2(0.6, 0.6)
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
@@ -156,6 +157,6 @@ texture = ExtResource("7_lyv4s")
 [node name="facility" parent="." instance=ExtResource("10_23jac")]
 layout_mode = 0
 offset_left = 703.0
-offset_top = 10.0
+offset_top = 107.0
 offset_right = 1580.0
 offset_bottom = 210.0

@@ -1,9 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://20cmqn7jwsoq"]
+[gd_scene load_steps=13 format=3 uid="uid://20cmqn7jwsoq"]
 
 [ext_resource type="Script" path="res://script/scenarioGenerator.gd" id="1_b8d3n"]
 [ext_resource type="PackedScene" uid="uid://bwoiqnp6pp5rd" path="res://scene/button_s.tscn" id="3_wrawm"]
 [ext_resource type="PackedScene" uid="uid://k8ch8byk5mbw" path="res://scene/facility/facility.tscn" id="4_si542"]
 [ext_resource type="PackedScene" uid="uid://ctf17ixxrd0ej" path="res://scene/scenarioGenerator/scenarioGenerator_frontierAI.tscn" id="4_wn0yh"]
+[ext_resource type="Texture2D" uid="uid://dla8gki0uk1k3" path="res://texture/icon/Icon_Star.png" id="5_w148n"]
+[ext_resource type="Texture2D" uid="uid://b6ib27ifm2cqu" path="res://texture/icon/Icon_Tablet.png" id="6_s3oj7"]
+[ext_resource type="Texture2D" uid="uid://1ce261pps6l6" path="res://texture/icon/Icon_Family.png" id="7_ly5dm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j5pvy"]
 
@@ -68,17 +71,22 @@ layout_mode = 0
 offset_left = 49.0
 offset_top = 176.0
 offset_right = 1162.0
-offset_bottom = 860.0
-
-[node name="facility" parent="summary" instance=ExtResource("4_si542")]
-custom_minimum_size = Vector2(0, 200)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 0
+offset_bottom = 812.0
 
 [node name="HSeparator" type="HSeparator" parent="summary"]
 self_modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(0, 60)
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+
+[node name="facility" parent="summary" instance=ExtResource("4_si542")]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="HSeparator2" type="HSeparator" parent="summary"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 
 [node name="HBox" type="HBoxContainer" parent="summary"]
@@ -91,6 +99,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Label_FacilityName" type="RichTextLabel" parent="summary/HBox/VBoxContainer"]
+clip_contents = false
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 theme_override_font_sizes/italics_font_size = 26
@@ -145,6 +154,7 @@ mouse_filter = 1
 text = ""
 myLabel = "CAPTAIN: MOROSE   "
 myColor = 15
+myIcon = "SOLAR_SYSTEM"
 
 [node name="Button_Passengers" parent="summary/HBox/VBoxContainer/HBoxContainer5" instance=ExtResource("3_wrawm")]
 custom_minimum_size = Vector2(80, 30)
@@ -253,6 +263,24 @@ anchor_bottom = 1.0
 offset_left = -310.0
 offset_top = 154.0
 offset_right = 0.0
-offset_bottom = -108.0
+offset_bottom = -89.0
 grow_horizontal = 0
 grow_vertical = 2
+
+[node name="IconStar" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(130, 755)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_w148n")
+
+[node name="IconTablet" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(307, 755)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("6_s3oj7")
+
+[node name="IconTablet2" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(483, 755)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("7_ly5dm")

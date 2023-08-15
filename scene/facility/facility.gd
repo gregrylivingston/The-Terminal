@@ -24,20 +24,20 @@ func addZoneDiagram(i):
 		newZone.myStylebox.corner_radius_top_right = 30
 		newZone.myStylebox.corner_radius_bottom_right = 30
 		newZone.myStylebox.corner_radius_top_left = 30
-		newZone.myStylebox.corner_radius_bottom_left = 30
+		#newZone.myStylebox.corner_radius_bottom_left = 30
 
 
 func addZone(i):
 	var newZone = zoneScene.instantiate()
-	newZone.size_flags_vertical = SIZE_SHRINK_CENTER
-	newZone.size_flags_horizontal = SIZE_SHRINK_BEGIN
+	newZone.size_flags_vertical = SIZE_SHRINK_BEGIN
+	newZone.size_flags_horizontal = SIZE_SHRINK_CENTER
 	newZone.zoneTitle = i.zoneType
 	add_child(newZone)
 	return newZone
 
 func addAirlock():
 	var newAirlock = airlockScene.instantiate()
-	newAirlock.size_flags_vertical = SIZE_SHRINK_CENTER
+	newAirlock.size_flags_vertical = SIZE_SHRINK_BEGIN
 	newAirlock.size_flags_horizontal = SIZE_SHRINK_BEGIN
 	add_child(newAirlock)
 	return newAirlock

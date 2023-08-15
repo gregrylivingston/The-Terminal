@@ -1,7 +1,1 @@
 res://scene/scenarioGenerator.tscn
-res://scene/terminal.tscn
-res://scene/dropdown.tscn
-res://scene/button_s.tscn
-res://scene/scenarioGenerator/scenarioGenerator_frontierAI.tscn
-res://script/scenarioGenerator.gd
-res://scene/menu_topLeftCrew.tscn

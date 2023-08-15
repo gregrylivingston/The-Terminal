@@ -1,23 +1,20 @@
-[gd_scene load_steps=6 format=3 uid="uid://deqex2lyq07i5"]
+[gd_scene load_steps=10 format=3 uid="uid://deqex2lyq07i5"]
 
-[ext_resource type="Texture2D" uid="uid://b6ib27ifm2cqu" path="res://texture/icon/Icon_Tablet.png" id="1_egq4e"]
 [ext_resource type="Script" path="res://scene/facility/zone.gd" id="1_rmdrp"]
+[ext_resource type="Texture2D" uid="uid://bbvn2iuo5u5px" path="res://texture/icon/Icon_STATION.png" id="2_ntnj7"]
+[ext_resource type="Texture2D" uid="uid://dogog45uq2ief" path="res://texture/icon/Icon_BED.png" id="2_q8mud"]
 [ext_resource type="PackedScene" uid="uid://bwoiqnp6pp5rd" path="res://scene/button_s.tscn" id="3_7cys2"]
+[ext_resource type="Texture2D" uid="uid://2qgl1nkiyw27" path="res://texture/icon/Icon_FOOD.png" id="3_msj3d"]
+[ext_resource type="Texture2D" uid="uid://y5ut76i5y88y" path="res://texture/icon/Icon_MILITARY.png" id="3_qmqmr"]
 [ext_resource type="PackedScene" uid="uid://dgfp8be1vulnn" path="res://scene/dropdown.tscn" id="4_h8nvt"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_130md"]
-bg_color = Color(1, 1, 1, 0)
-border_width_left = 1
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(1, 1, 1, 1)
+[ext_resource type="Texture2D" uid="uid://bq6duoxrgfmm8" path="res://texture/icon/Icon_STORAGE.png" id="4_inw0k"]
+[ext_resource type="Texture2D" uid="uid://b6ib27ifm2cqu" path="res://texture/icon/Icon_Tablet.png" id="4_vfs5l"]
 
 [node name="zone" type="Button"]
 self_modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(120, 0)
-offset_right = 140.0
-offset_bottom = 294.0
+custom_minimum_size = Vector2(100, 0)
+offset_right = 100.0
+offset_bottom = 96.0
 script = ExtResource("1_rmdrp")
 
 [node name="VBox" type="VBoxContainer" parent="."]
@@ -25,12 +22,74 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -24.0
+offset_bottom = 14.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="RichTextLabel" parent="VBox"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBox"]
 layout_mode = 2
-size_flags_horizontal = 4
+
+[node name="VSeparator2" type="VSeparator" parent="VBox/HBoxContainer"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(6, 0)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBox/HBoxContainer"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 6
+texture = ExtResource("2_ntnj7")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TextureRect3" type="TextureRect" parent="VBox/HBoxContainer"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 6
+texture = ExtResource("3_qmqmr")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TextureRect2" type="TextureRect" parent="VBox/HBoxContainer"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 6
+texture = ExtResource("4_vfs5l")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="VSeparator" type="VSeparator" parent="VBox/HBoxContainer"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(15, 0)
+layout_mode = 2
+
+[node name="Panel" type="Button" parent="VBox"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="dropdown" parent="VBox/Panel" instance=ExtResource("4_h8nvt")]
+custom_minimum_size = Vector2(0, 0)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -30.0
+offset_right = 52.0
+offset_bottom = -5.0
+grow_vertical = 0
+size_flags_horizontal = 3
+selectedOption = "OK"
+showIcon = false
+
+[node name="Label" type="RichTextLabel" parent="VBox/Panel"]
+layout_mode = 2
+offset_left = 6.0
+offset_top = 49.0
+offset_right = 62.0
+offset_bottom = 72.0
 size_flags_vertical = 0
 bbcode_enabled = true
 text = "[b]ZONEA[/b]"
@@ -38,31 +97,54 @@ fit_content = true
 scroll_active = false
 autowrap_mode = 0
 shortcut_keys_enabled = false
+text_direction = 1
 
-[node name="TextureRect" type="TextureRect" parent="VBox"]
-custom_minimum_size = Vector2(50, 20)
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBox/Panel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -18.0
+offset_right = 100.0
+offset_bottom = 2.0
+grow_vertical = 2
+
+[node name="VSeparator2" type="VSeparator" parent="VBox/Panel/HBoxContainer2"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(1, 0)
 layout_mode = 2
-size_flags_horizontal = 4
-texture = ExtResource("1_egq4e")
+
+[node name="TextureRect" type="TextureRect" parent="VBox/Panel/HBoxContainer2"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("2_q8mud")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="Panel" type="Panel" parent="VBox"]
-custom_minimum_size = Vector2(0, 100)
+[node name="TextureRect3" type="TextureRect" parent="VBox/Panel/HBoxContainer2"]
+custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_130md")
-
-[node name="TextureRect2" type="TextureRect" parent="VBox"]
-custom_minimum_size = Vector2(50, 20)
-layout_mode = 2
-size_flags_horizontal = 4
-texture = ExtResource("1_egq4e")
+size_flags_horizontal = 0
+texture = ExtResource("3_msj3d")
 expand_mode = 1
 stretch_mode = 4
-flip_h = true
-flip_v = true
+
+[node name="TextureRect2" type="TextureRect" parent="VBox/Panel/HBoxContainer2"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("4_inw0k")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="VSeparator" type="VSeparator" parent="VBox/Panel/HBoxContainer2"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(15, 0)
+layout_mode = 2
 
 [node name="alarms" type="HBoxContainer" parent="VBox"]
+visible = false
 custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 
@@ -75,10 +157,3 @@ myIcon = "BASE"
 custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
 myIcon = "BASE"
-
-[node name="dropdown" parent="VBox/alarms" instance=ExtResource("4_h8nvt")]
-custom_minimum_size = Vector2(0, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-selectedOption = "NML"
-showIcon = false

@@ -20,6 +20,16 @@ text = "FRONTIERAI 0.1"
 scroll_active = false
 text_direction = 2
 
+[node name="Button_S2" parent="." instance=ExtResource("3_bxbya")]
+layout_mode = 2
+myLabel = "enableBackups(true)"
+myColor = 11
+
+[node name="HSeparator2" type="HSeparator" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
 [node name="dropdown_style" parent="." instance=ExtResource("2_i7qps")]
 layout_mode = 2
 size_flags_vertical = 8

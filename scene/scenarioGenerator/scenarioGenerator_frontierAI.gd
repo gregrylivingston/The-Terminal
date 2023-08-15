@@ -8,6 +8,7 @@ func _ready():
 	
 	
 func beginGame():
+	G.buildingScenario = false
 	get_tree().change_scene_to_file("res://scene/terminal.tscn")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

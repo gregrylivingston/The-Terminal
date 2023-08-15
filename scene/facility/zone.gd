@@ -15,23 +15,25 @@ enum hazardAlarm { cloud_haze , fire , cloud_haze_fill}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$VBox/alarms/dropdown.options = [ "NML" , "REST" , "EVAC"]
+	$VBox/Panel/dropdown.options = [ "OK" , "REST" , "EVAC"]
 	setupAlarm(alarmsVbox.get_node("Button_S_TempAlarm") , tempAlarm , 2)
 	setupAlarm(alarmsVbox.get_node("Button_S_HazardAlarm") , hazardAlarm , 0)
 	
 	
 	myStylebox = StyleBoxFlat.new()
-	myStylebox.bg_color = Color(0,0,0)
+	myStylebox.bg_color = Color(0,0,0,0)
 	myStylebox.border_color = Color(1,1,1)
 	
 	for i in corner_radius: myStylebox["corner_radius_" + i] = corner_radius[i]
 	for i in border_width: myStylebox["border_width_" + i] = border_width[i]
 
-	shipPanel.add_theme_stylebox_override("panel" , myStylebox)
-
-	$VBox/Label.text = "[b]" + zoneTitle + "[/b]"
+	shipPanel.add_theme_stylebox_override("normal" , myStylebox)
+	shipPanel.add_theme_stylebox_override("pressed" , myStylebox)
+	shipPanel.add_theme_stylebox_override("hover" , myStylebox)
+	shipPanel.add_theme_stylebox_override("focus" , myStylebox)
+	$VBox/Panel/Label.text = zoneTitle
 	
-
+	if G.buildingScenario: $VBox/Panel/dropdown.visible = false
 
 func setupAlarm(node , alarmStateEnum , state):
 	node.addIcon("res://texture/icon/"+ alarmStateEnum.find_key(state).replace("_","-") +".svg" , false)

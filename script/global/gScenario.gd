@@ -1,7 +1,7 @@
 extends Node
 
 enum scenarioType { EXPLORATION , EXTRACTION , MILITARY , SCIENCE , TOURISM , TRADE }
-enum scenarioLocation { EARTH_SYSTEM , SOLAR_SYSTEM , DISTANT_STAR , GALAXY , UNIVERSE, ALTERNATE_DIMENSION}
+enum scenarioLocation { EARTH_SYSTEM , SOLAR_SYSTEM , DEEP_SPACE}
 
 var myScenarioType = "EXPLORATION"
 var myScenarioLocation = "EARTH_SYSTEM"
