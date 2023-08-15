@@ -8,8 +8,7 @@ var button_scenarioType
 var button_facilitySize
 
 
-func beginGame():
-	get_tree().change_scene_to_file("res://scene/terminal.tscn")
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,7 +16,7 @@ func _ready():
 	G.terminalNode = self
 	
 	#$summary.visible = false
-	$VBox2/Button_S.connect("pressed",beginGame)
+
 	$VBox/HBox/Button_S.connect("pressed" , randomizeScenario)
 
 	randomizeScenario()
@@ -26,6 +25,7 @@ func _ready():
 #		createScenarioButton(i, "res://texture/icon/Icon_"+i+".png").get_node("Button_S").connect("pressed",saveFacilitySize.bind(i))
 
 func loadDropdowns():
+	for i in get_tree().get_nodes_in_group("dropdown"): i.freeDropdown()
 	for i in [$VBox/HBox/VBox1 , $VBox/HBox/VBox2, $VBox/HBox/VBox3, $VBox/HBox/VBox4]:
 		for child in i.get_children():child.queue_free()
 	
@@ -74,7 +74,7 @@ func loadProposedScenario():
 	gFacility.myFacilitySize = button_facilitySize.selectedOption
 
 	gFacility.myFacilityName =  shipNames[gFacility.myType][gScenario.myScenarioType][ randi_range(0,shipNames[gFacility.myType][gScenario.myScenarioType].size()-1)] 
-	$summary/Label_FacilityName.text = "[i]" + gFacility.myFacilityName.to_upper() + "[/i]"
+	$summary/HBox/VBoxContainer/Label_FacilityName.text = "[i]" + gFacility.myFacilityName.to_upper() + "[/i]"
 
 	gFacility.createMyZones()
 	for i in $summary/facility.get_children():i.queue_free()

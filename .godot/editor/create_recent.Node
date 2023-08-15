@@ -1,13 +1,13 @@
 VBoxContainer
-HBoxContainer
-Panel
-TextureRect
 RichTextLabel
+HBoxContainer
+TextureRect
+HSeparator
+Panel
 Label
 Button
 PopupMenu
 Control
-HSeparator
 GridContainer
 FlowContainer
 ColorRect

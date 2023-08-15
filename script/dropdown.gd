@@ -9,7 +9,7 @@ signal dropdownClosed
 
 var dropdownPanel
 var dropdownPanelScene = preload("res://scene/dropdownPanel.tscn")
-var options = []
+@export var options = []
 @export var showIcon = true
 
 func _ready():

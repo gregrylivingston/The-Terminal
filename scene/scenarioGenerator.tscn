@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://20cmqn7jwsoq"]
+[gd_scene load_steps=10 format=3 uid="uid://20cmqn7jwsoq"]
 
 [ext_resource type="Script" path="res://script/scenarioGenerator.gd" id="1_b8d3n"]
 [ext_resource type="PackedScene" uid="uid://bwoiqnp6pp5rd" path="res://scene/button_s.tscn" id="3_wrawm"]
 [ext_resource type="PackedScene" uid="uid://k8ch8byk5mbw" path="res://scene/facility/facility.tscn" id="4_si542"]
+[ext_resource type="PackedScene" uid="uid://ctf17ixxrd0ej" path="res://scene/scenarioGenerator/scenarioGenerator_frontierAI.tscn" id="4_wn0yh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j5pvy"]
 
@@ -10,6 +11,18 @@
 bg_color = Color(0, 0, 0, 1)
 skew = Vector2(0.03, 0)
 corner_radius_top_left = 75
+corner_radius_bottom_right = 75
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jacg4"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_bottom_right = 75
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y5nky"]
+bg_color = Color(0.862745, 0.862745, 0.862745, 1)
+corner_radius_bottom_right = 75
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mv5ku"]
+bg_color = Color(0.862745, 0.862745, 0.862745, 1)
 corner_radius_bottom_right = 75
 
 [node name="scenarioGenerator" type="Panel"]
@@ -35,6 +48,7 @@ grow_vertical = 0
 color = Color(0.768627, 0.686275, 0.501961, 1)
 
 [node name="Panel2" type="Panel" parent="."]
+layout_mode = 0
 offset_left = 1251.0
 offset_top = 110.0
 offset_right = 2651.0
@@ -42,6 +56,7 @@ offset_bottom = 931.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_708p2")
 
 [node name="Panel3" type="Panel" parent="."]
+layout_mode = 0
 offset_left = -165.0
 offset_top = 110.0
 offset_right = 1235.0
@@ -53,21 +68,147 @@ layout_mode = 0
 offset_left = 49.0
 offset_top = 176.0
 offset_right = 1162.0
-offset_bottom = 622.0
+offset_bottom = 860.0
 
-[node name="Label_FacilityName" type="RichTextLabel" parent="summary"]
+[node name="facility" parent="summary" instance=ExtResource("4_si542")]
+custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
-theme_override_font_sizes/italics_font_size = 36
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="HSeparator" type="HSeparator" parent="summary"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="HBox" type="HBoxContainer" parent="summary"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="summary/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label_FacilityName" type="RichTextLabel" parent="summary/HBox/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/italics_font_size = 26
 bbcode_enabled = true
 text = "[i]FACILITYNAME[/i]"
 fit_content = true
 scroll_active = false
+autowrap_mode = 0
 text_direction = 2
 
-[node name="facility" parent="summary" instance=ExtResource("4_si542")]
+[node name="HBoxContainer3" type="HBoxContainer" parent="summary/HBox/VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 8
 size_flags_vertical = 3
+
+[node name="Button_Passengers" parent="summary/HBox/VBoxContainer/HBoxContainer3" instance=ExtResource("3_wrawm")]
+custom_minimum_size = Vector2(80, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = ""
+myLabel = "FACILITIES   "
+myColor = 12
+
+[node name="Button_Officers" parent="summary/HBox/VBoxContainer/HBoxContainer3" instance=ExtResource("3_wrawm")]
+custom_minimum_size = Vector2(80, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = ""
+myLabel = "DATASHEET    "
+myColor = 12
+
+[node name="Button_Crew" parent="summary/HBox/VBoxContainer/HBoxContainer3" instance=ExtResource("3_wrawm")]
+custom_minimum_size = Vector2(80, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = ""
+myLabel = " HISTORY   "
+myColor = 12
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="summary/HBox/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Button_Officers" parent="summary/HBox/VBoxContainer/HBoxContainer5" instance=ExtResource("3_wrawm")]
+custom_minimum_size = Vector2(80, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = ""
+myLabel = "CAPTAIN: MOROSE   "
+myColor = 15
+
+[node name="Button_Passengers" parent="summary/HBox/VBoxContainer/HBoxContainer5" instance=ExtResource("3_wrawm")]
+custom_minimum_size = Vector2(80, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = ""
+myLabel = "ENGINEER: DUNCAN   "
+myColor = 15
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="summary/HBox/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button_Officers" parent="summary/HBox/VBoxContainer/HBoxContainer4" instance=ExtResource("3_wrawm")]
+custom_minimum_size = Vector2(80, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+theme_override_font_sizes/font_size = 30
+text = "7       "
+myColor = 15
+
+[node name="Button_Crew" parent="summary/HBox/VBoxContainer/HBoxContainer4" instance=ExtResource("3_wrawm")]
+custom_minimum_size = Vector2(80, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+theme_override_font_sizes/font_size = 30
+text = "7       "
+myLabel = " "
+myColor = 14
+
+[node name="Button_Passengers" parent="summary/HBox/VBoxContainer/HBoxContainer4" instance=ExtResource("3_wrawm")]
+custom_minimum_size = Vector2(80, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_jacg4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_y5nky")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mv5ku")
+text = "2       "
+myColor = 13
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="summary/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSeparator2" type="HSeparator" parent="summary/HBox/VBoxContainer2"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="summary/HBox/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 14
+text = "The Starlight Odyssey stands as a marvel of engineering, a resplendent haven in the boundless expanse of space. Every corner of this vessel exudes comfort and functionality, making it a true home among the stars for its crew. The ship boasts a range of luxurious amenities, including an expansive observation deck that offers panoramic views of the cosmos, a serene hydroponic garden that provides fresh sustenance, and state-of-the-art recreational facilities that cater to the diverse interests of the crew. The common areas are adorned with artistic installations and interactive displays that celebrate the history of space exploration, fostering a sense of unity among the inhabitants.
+
+This interstellar abode has a rich history of its own, having been commissioned by the Galactic Federation in 2235 as a symbol of unity among the interplanetary nations. Originally intended for long-haul colonization missions, the Starlight Odyssey was repurposed as a diplomatic vessel after the resolution of a galaxy-wide conflict. It became a beacon of cooperation, hosting conferences and peace negotiations between previously warring factions. The ship's hull proudly displays the emblems of all member nations, a testament to the power of collaboration in the face of adversity.
+
+A diverse crew calls the Starlight Odyssey home, comprising experts from various scientific disciplines, diplomats adept in interstellar relations, and a capable engineering team. Captain Liara Voss leads this ensemble with wisdom and compassion, embodying the ship's spirit of exploration and cooperation. The ship's AI, affectionately known as \"Orion,\" serves as a vital member of the crew, overseeing navigation, communication, and the ship's well-being. As the crew traverses the cosmos, they continue to add to the ship's storied history, forging connections with alien civilizations and pushing the boundaries of knowledge. The Starlight Odyssey is not just a vessel; it's a sanctuary of shared dreams and discoveries, a testament to humanity's relentless pursuit of adventure and understanding."
 
 [node name="VBox" type="VBoxContainer" parent="."]
 layout_mode = 0
@@ -103,16 +244,15 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="VBox2" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 1280.0
-offset_top = 172.0
-offset_right = 1566.0
-offset_bottom = 800.0
-
-[node name="Button_S" parent="VBox2" instance=ExtResource("3_wrawm")]
-custom_minimum_size = Vector2(200, 80)
-layout_mode = 2
-size_flags_vertical = 10
-myLabel = "BEGIN"
-myColor = 11
+[node name="scenarioGenerator_frontierAi" parent="." instance=ExtResource("4_wn0yh")]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -310.0
+offset_top = 154.0
+offset_right = 0.0
+offset_bottom = -108.0
+grow_horizontal = 0
+grow_vertical = 2

@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://ctf17ixxrd0ej"]
+
+[ext_resource type="Script" path="res://scene/scenarioGenerator/scenarioGenerator_frontierAI.gd" id="1_334di"]
+[ext_resource type="PackedScene" uid="uid://dgfp8be1vulnn" path="res://scene/dropdown.tscn" id="2_i7qps"]
+[ext_resource type="PackedScene" uid="uid://bwoiqnp6pp5rd" path="res://scene/button_s.tscn" id="3_bxbya"]
+
+[node name="scenarioGenerator_frontierAi" type="VBoxContainer"]
+offset_left = 1280.0
+offset_top = 172.0
+offset_right = 1566.0
+offset_bottom = 800.0
+script = ExtResource("1_334di")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(200, 25)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 10
+text = "FRONTIERAI 0.1"
+scroll_active = false
+text_direction = 2
+
+[node name="dropdown_style" parent="." instance=ExtResource("2_i7qps")]
+layout_mode = 2
+size_flags_vertical = 8
+selectedOption = "style(default)"
+options = ["style(bright)", "style(mauve)"]
+
+[node name="dropdown_personality" parent="." instance=ExtResource("2_i7qps")]
+layout_mode = 2
+size_flags_vertical = 8
+selectedOption = "personality(default)"
+options = ["personality(beeps)", "personality(formal)", "personality(British)"]
+
+[node name="HSeparator" type="HSeparator" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Button_S" parent="." instance=ExtResource("3_bxbya")]
+custom_minimum_size = Vector2(200, 80)
+layout_mode = 2
+size_flags_vertical = 8
+myLabel = "BEGIN"
+myColor = 11
