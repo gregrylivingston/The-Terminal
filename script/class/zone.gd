@@ -1,6 +1,8 @@
 class_name Zone extends Resource
 
-enum zoneType { HABITAT , BRIDGE , ENGINEERING , COMMAND }
+
+@export var zoneType = "HABITAT"
+var zoneNumber : int
 
 
 # Called when the node enters the scene tree for the first time.
