@@ -17,7 +17,7 @@ func _ready():
 	G.terminalNode = self
 	
 	#$summary.visible = false
-	$summary/Button_S.connect("pressed",beginGame)
+	$VBox2/Button_S.connect("pressed",beginGame)
 	$VBox/HBox/Button_S.connect("pressed" , randomizeScenario)
 
 	randomizeScenario()

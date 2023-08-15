@@ -5,6 +5,7 @@ var airlockScene = preload("res://scene/facility/airlock.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	for i in get_children():i.queue_free()
 	setupZones()
 
 

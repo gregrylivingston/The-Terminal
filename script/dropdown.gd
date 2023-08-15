@@ -45,6 +45,7 @@ func selectOption(selection):
 	emit_signal("newSelection")
 
 func showOptions():
+	for i in get_tree().get_nodes_in_group("dropdown"): i.freeDropdown()
 	dropdownPanel = dropdownPanelScene.instantiate()
 	for i in options: addOptionButton(i)
 	emit_signal("dropdownOpen")

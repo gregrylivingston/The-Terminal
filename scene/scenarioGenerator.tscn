@@ -1,8 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://20cmqn7jwsoq"]
+[gd_scene load_steps=6 format=3 uid="uid://20cmqn7jwsoq"]
 
 [ext_resource type="Script" path="res://script/scenarioGenerator.gd" id="1_b8d3n"]
 [ext_resource type="PackedScene" uid="uid://bwoiqnp6pp5rd" path="res://scene/button_s.tscn" id="3_wrawm"]
 [ext_resource type="PackedScene" uid="uid://k8ch8byk5mbw" path="res://scene/facility/facility.tscn" id="4_si542"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j5pvy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_708p2"]
+bg_color = Color(0, 0, 0, 1)
+skew = Vector2(0.03, 0)
+corner_radius_top_left = 75
+corner_radius_bottom_right = 75
 
 [node name="scenarioGenerator" type="Panel"]
 self_modulate = Color(0, 0, 0, 1)
@@ -11,31 +19,41 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_j5pvy")
 script = ExtResource("1_b8d3n")
 
-[node name="GridContainer" type="GridContainer" parent="."]
+[node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -478.0
-offset_top = -211.0
-offset_right = 473.0
-offset_bottom = 172.0
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -803.0
+offset_bottom = 8.0
 grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/h_separation = 50
-theme_override_constants/v_separation = 50
-columns = 3
+grow_vertical = 0
+color = Color(0.768627, 0.686275, 0.501961, 1)
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 1251.0
+offset_top = 110.0
+offset_right = 2651.0
+offset_bottom = 931.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_708p2")
+
+[node name="Panel3" type="Panel" parent="."]
+offset_left = -165.0
+offset_top = 110.0
+offset_right = 1235.0
+offset_bottom = 931.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_708p2")
 
 [node name="summary" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 217.0
-offset_top = 282.0
-offset_right = 1333.0
-offset_bottom = 809.0
+offset_left = 49.0
+offset_top = 176.0
+offset_right = 1162.0
+offset_bottom = 622.0
 
 [node name="Label_FacilityName" type="RichTextLabel" parent="summary"]
 layout_mode = 2
@@ -48,22 +66,14 @@ text_direction = 2
 
 [node name="facility" parent="summary" instance=ExtResource("4_si542")]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 3
-
-[node name="Button_S" parent="summary" instance=ExtResource("3_wrawm")]
-custom_minimum_size = Vector2(200, 35)
-layout_mode = 2
 size_flags_horizontal = 8
-size_flags_vertical = 10
-myLabel = "BEGIN"
-myColor = 11
+size_flags_vertical = 3
 
 [node name="VBox" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 199.0
+offset_left = 39.0
 offset_top = 28.0
-offset_right = 1388.0
+offset_right = 1215.0
 offset_bottom = 74.0
 
 [node name="HBox" type="HBoxContainer" parent="VBox"]
@@ -92,3 +102,17 @@ size_flags_horizontal = 3
 [node name="VBox4" type="VBoxContainer" parent="VBox/HBox"]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="VBox2" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 1280.0
+offset_top = 172.0
+offset_right = 1566.0
+offset_bottom = 800.0
+
+[node name="Button_S" parent="VBox2" instance=ExtResource("3_wrawm")]
+custom_minimum_size = Vector2(200, 80)
+layout_mode = 2
+size_flags_vertical = 10
+myLabel = "BEGIN"
+myColor = 11

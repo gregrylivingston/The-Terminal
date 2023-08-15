@@ -1,9 +1,9 @@
+VBoxContainer
 HBoxContainer
 Panel
 TextureRect
 RichTextLabel
 Label
-VBoxContainer
 Button
 PopupMenu
 Control

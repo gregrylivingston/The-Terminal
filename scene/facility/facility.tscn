@@ -1,9 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://k8ch8byk5mbw"]
+[gd_scene load_steps=4 format=3 uid="uid://k8ch8byk5mbw"]
 
 [ext_resource type="Script" path="res://scene/facility/facility.gd" id="1_mf4w3"]
+[ext_resource type="PackedScene" uid="uid://cb1tj0134akwd" path="res://scene/facility/airlock.tscn" id="2_gti5b"]
+[ext_resource type="PackedScene" uid="uid://deqex2lyq07i5" path="res://scene/facility/zone.tscn" id="3_ycnuo"]
 
 [node name="facility" type="HBoxContainer"]
 offset_right = 514.0
 offset_bottom = 301.0
 theme_override_constants/separation = -5
 script = ExtResource("1_mf4w3")
+
+[node name="airlock" parent="." instance=ExtResource("2_gti5b")]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="zone" parent="." instance=ExtResource("3_ycnuo")]
+layout_mode = 2
+size_flags_vertical = 4
