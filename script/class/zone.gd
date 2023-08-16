@@ -1,7 +1,13 @@
-class_name Zone extends Resource
+class_name Zone extends Node
 
 
-@export var zoneType = "HABITAT"
+
+@export var zoneType : Enums.zoneTypes = Enums.zoneTypes.COMMS
+@export var corner_radius = {"top_left":0,"bottom_left":0,"top_right":0,"bottom_right":0}
+@export var border_width = { "left": 5 , "top" : 5 , "right" : 5 , "bottom" : 5}
+
+
+
 var zoneNumber : int
 
 

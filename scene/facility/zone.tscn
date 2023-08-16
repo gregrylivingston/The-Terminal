@@ -69,21 +69,6 @@ clip_contents = true
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 
-[node name="dropdown" parent="VBox/Panel" instance=ExtResource("4_h8nvt")]
-custom_minimum_size = Vector2(0, 0)
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 5.0
-offset_top = -30.0
-offset_right = 52.0
-offset_bottom = -5.0
-grow_vertical = 0
-size_flags_horizontal = 3
-selectedOption = "OK"
-showIcon = false
-
 [node name="Label" type="RichTextLabel" parent="VBox/Panel"]
 layout_mode = 2
 offset_left = 6.0
@@ -104,9 +89,9 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_top = -18.0
+offset_top = 20.0
 offset_right = 100.0
-offset_bottom = 2.0
+offset_bottom = 40.0
 grow_vertical = 2
 
 [node name="VSeparator2" type="VSeparator" parent="VBox/Panel/HBoxContainer2"]
@@ -144,7 +129,6 @@ custom_minimum_size = Vector2(15, 0)
 layout_mode = 2
 
 [node name="alarms" type="HBoxContainer" parent="VBox"]
-visible = false
 custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 
@@ -157,3 +141,11 @@ myIcon = "BASE"
 custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
 myIcon = "BASE"
+
+[node name="dropdown" parent="VBox/alarms" instance=ExtResource("4_h8nvt")]
+custom_minimum_size = Vector2(0, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+selectedOption = "OK"
+options = Array[String](["OK", "REST", "EVAC"])
+showIcon = false

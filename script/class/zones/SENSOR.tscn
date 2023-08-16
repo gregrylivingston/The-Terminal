@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdawtql4nlou5"]
+
+[ext_resource type="Script" path="res://script/class/zone.gd" id="1_nl1d2"]
+
+[node name="ENG" type="Node"]
+script = ExtResource("1_nl1d2")
+zoneType = 8

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjr50eolx2mor"]
+
+[ext_resource type="Script" path="res://script/class/zone.gd" id="1_p3qyp"]
+
+[node name="HAB" type="Node"]
+script = ExtResource("1_p3qyp")
+zoneType = 6

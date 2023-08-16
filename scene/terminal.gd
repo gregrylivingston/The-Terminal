@@ -17,18 +17,18 @@ func _ready():
 	nodes.personListHeader = $VBoxContainer2/PersonListHeader
 	nodes.personListVbox = $VBoxContainer2/VBoxContainer
 	
-	nodes.officerButton.connect("pressed",showCharacters.bind(G.characterClass.OFFICER))
-	nodes.crewButton.connect("pressed",showCharacters.bind(G.characterClass.CREWMEMBER))
-	nodes.passengerButton.connect("pressed",showCharacters.bind(G.characterClass.PASSENGER))
+	nodes.officerButton.connect("pressed",showCharacters.bind( Enums.characterClass.OFFICER))
+	nodes.crewButton.connect("pressed",showCharacters.bind( Enums.characterClass.CREWMEMBER))
+	nodes.passengerButton.connect("pressed",showCharacters.bind( Enums.characterClass.PASSENGER))
 
 	var charStats = G.getCharacterStats()
-	nodes.officerButton.text = str(charStats[G.characterClass.OFFICER]) + "      "
-	nodes.crewButton.text = str(charStats[G.characterClass.CREWMEMBER]) + "      "
-	nodes.passengerButton.text = str(charStats[G.characterClass.PASSENGER]) + "        "
+	nodes.officerButton.text = str(charStats[ Enums.characterClass.OFFICER]) + "      "
+	nodes.crewButton.text = str(charStats[ Enums.characterClass.CREWMEMBER]) + "      "
+	nodes.passengerButton.text = str(charStats[ Enums.characterClass.PASSENGER]) + "        "
 	
 	
 func showCharacters(characterClass):
-	nodes.personListHeader.text = "[i]"+ G.characterClass.find_key(characterClass)+"S[/i]"
+	nodes.personListHeader.text = "[i]"+ Enums.characterClass.find_key(characterClass)+"S[/i]"
 	for i in nodes.personListVbox.get_children(): i.queue_free()
 	for char in G.characterList:if char.characterClass == characterClass: addCharacterButton(char)
 

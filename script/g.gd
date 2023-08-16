@@ -4,6 +4,8 @@ var button_s = preload("res://scene/button_s.tscn")
 var terminalNode
 var buildingScenario = true
 
+
+
 enum colors { indianred, salmon, lightcoral,  lightsalmon,  
 sandybrown, khaki,
 moccasin, blanchedalmond, lightyellow, 
@@ -19,35 +21,22 @@ var colorMap = {
 	"NML":12,"EVAC":0,"REST":4,"OK":12
 }
 
-enum characterClass { OFFICER , CREWMEMBER , PASSENGER , STOWAWAY, ROBOT, ALIEN }
-enum characterProfession { CAPTAIN , ENGINEER , DOCTOR , MAINTENANCE}
 
-const professionOfficerTitle = {
-	characterProfession.CAPTAIN:"CAPTAIN",
-	characterProfession.ENGINEER:"CHEIF ENGINEER",
-	characterProfession.DOCTOR:"DOCTOR",
-	characterProfession.MAINTENANCE:"SUPPLY OFFICER",
-}
 
-const professionCrewTitle = {
-	characterProfession.CAPTAIN:"SEARGANT",
-	characterProfession.ENGINEER:"ENGINEER",
-	characterProfession.DOCTOR:"NURSE",
-	characterProfession.MAINTENANCE:"CREWMEMBER",
-}
+
 
 const maleFirstNames = ["ADAM" , "ALAN", "BEN", "BILL", "CLINTON", "CORY"]
 
 var characterList = []
 
 func _init():
-	for x in characterClass.size():
-		for y in characterProfession.size():
+	for x in Enums.characterClass.size():
+		for y in Enums.characterProfession.size():
 			createCharacter(x,y)
-	for i in 3: createCharacter(characterClass.PASSENGER,randi_range(0,characterProfession.size()-1))
-	for i in 3: createCharacter(characterClass.CREWMEMBER,randi_range(0,characterProfession.size()-1))
+	for i in 3: createCharacter(Enums.characterClass.PASSENGER,randi_range(0,Enums.characterProfession.size()-1))
+	for i in 3: createCharacter(Enums.characterClass.CREWMEMBER,randi_range(0,Enums.characterProfession.size()-1))
 
-func createCharacter( charClass : characterClass, charProfession : characterProfession ):
+func createCharacter( charClass : Enums.characterClass, charProfession : Enums.characterProfession ):
 	var newCharacter = Character.new()
 	newCharacter.firstName = maleFirstNames[randi_range(0,maleFirstNames.size() - 1)]
 	newCharacter.lastName = Names.lastNames[randi_range(0,Names.lastNames.size() - 1)]
@@ -61,7 +50,7 @@ func createCharacter( charClass : characterClass, charProfession : characterProf
 
 func getCharacterStats():
 	var charStats = { }
-	for charClass in characterClass.size(): charStats.merge({charClass:0})
+	for charClass in Enums.characterClass.size(): charStats.merge({charClass:0})
 	for char in characterList: charStats[char.characterClass] += 1
 	return charStats
 		

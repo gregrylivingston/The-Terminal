@@ -4,18 +4,16 @@ var myStylebox
 enum tempAlarm { thermometer , thermometer_low, thermometer_half , thermometer_high }
 enum hazardAlarm { cloud_haze , fire , cloud_haze_fill}
 
+@export var zoneType : Enums.zoneTypes
 
 @onready var alarmsVbox = $VBox/alarms
 @onready var shipPanel = $VBox/Panel
 
-@export var zoneTitle : String = "ZONE"
+var myZone : Zone
 
-@export var corner_radius = {"top_left":0,"bottom_left":0,"top_right":0,"bottom_right":0}
-@export var border_width = { "left": 5 , "top" : 5 , "right" : 5 , "bottom" : 5}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$VBox/Panel/dropdown.options = [ "OK" , "REST" , "EVAC"]
 	setupAlarm(alarmsVbox.get_node("Button_S_TempAlarm") , tempAlarm , 2)
 	setupAlarm(alarmsVbox.get_node("Button_S_HazardAlarm") , hazardAlarm , 0)
 	
@@ -24,16 +22,18 @@ func _ready():
 	myStylebox.bg_color = Color(0,0,0,0)
 	myStylebox.border_color = Color(1,1,1)
 	
-	for i in corner_radius: myStylebox["corner_radius_" + i] = corner_radius[i]
-	for i in border_width: myStylebox["border_width_" + i] = border_width[i]
+	for i in myZone.corner_radius: myStylebox["corner_radius_" + i] = myZone.corner_radius[i]
+	for i in myZone.border_width: myStylebox["border_width_" + i] = myZone.border_width[i]
 
 	shipPanel.add_theme_stylebox_override("normal" , myStylebox)
 	shipPanel.add_theme_stylebox_override("pressed" , myStylebox)
 	shipPanel.add_theme_stylebox_override("hover" , myStylebox)
 	shipPanel.add_theme_stylebox_override("focus" , myStylebox)
-	$VBox/Panel/Label.text = zoneTitle
+	$VBox/Panel/Label.text = Enums.zoneTypes.find_key(zoneType)
 	
-	if G.buildingScenario: $VBox/Panel/dropdown.visible = false
+	if G.buildingScenario: $VBox/alarms.visible = false
+
+	$VBox/Panel/Label.text = Enums.zoneTypes.find_key(myZone.zoneType)
 
 func setupAlarm(node , alarmStateEnum , state):
 	node.addIcon("res://texture/icon/"+ alarmStateEnum.find_key(state).replace("_","-") +".svg" , false)

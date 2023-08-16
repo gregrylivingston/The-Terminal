@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cik3i3ojwfhoj"]
+
+[ext_resource type="Script" path="res://script/class/zone.gd" id="1_apaqi"]
+
+[node name="ENG" type="Node"]
+script = ExtResource("1_apaqi")
+zoneType = 2

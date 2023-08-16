@@ -2,7 +2,6 @@ extends Node
 
 enum facilityType {  SHIP , STATION , BASE }
 enum facilitySize { TINY ,  SMALL , MEDIUM , LARGE }
-enum zoneType { HAB , BRIDGE , ENG , COMM , HUB , AIRLOCK }
 
 var myType = "SHIP"
 var myFacilitySize = "TINY"
@@ -21,138 +20,139 @@ func createMyZones():
 	#if gFacility.myType == gFacility.facilityType.find_key(gFacility.facilityType.STATION):addAirlock()
 	
 
-	
-	
-var zoneResource = preload("res://script/class/zone.gd")
 
 func createZone( zoneNumber ):
-	var newZone = zoneResource.new()
-	newZone.zoneNumber = zoneNumber
-	newZone.zoneType = "A NEW ZONE"
+	var newZone
+	var myZoneType
 	match(myType):
-		"SHIP":setShipZoneType(newZone , zoneNumber)
-		"BASE":setBaseZoneType(newZone , zoneNumber)
-		"STATION":setStationZoneType(newZone , zoneNumber)
-
+		"SHIP": myZoneType = setShipZoneType(newZone , zoneNumber)
+		"BASE": myZoneType = setBaseZoneType(newZone , zoneNumber)
+		"STATION": myZoneType  = setStationZoneType(newZone , zoneNumber)
+	print(myZoneType)
+	newZone = getZoneResource(myZoneType)
+	newZone.zoneNumber = zoneNumber
 	myZones.push_back(newZone)
 
+func getZoneResource(type):
+	return load("res://script/class/zones/" + type + ".tscn").instantiate()
+
 func setShipZoneType(newZone, zoneNumber):
-	if zoneNumber == 0: newZone.zoneType = "ENG"
-	if zoneNumber == 2:newZone.zoneType = "HAB"
+	if zoneNumber == 0: return "ENG"
+	if zoneNumber == 2: return "HAB"
 	
 	if zoneNumber == 1:
 		match (gScenario.myScenarioType):
-			"EXPLORATION":newZone.zoneType = "CARGO"
-			"EXTRACTION":newZone.zoneType = "CARGO"
-			"MILITARY":newZone.zoneType = "ARM"
-			"SCIENCE":newZone.zoneType = "LAB"
-			"TOURISM":newZone.zoneType = "HAB"
-			"TRADE":newZone.zoneType = "HUB"
+			"EXPLORATION": return "CARGO"
+			"EXTRACTION": return "CARGO"
+			"MILITARY":  return "ARM"
+			"SCIENCE": return "LAB"
+			"TOURISM": return "HAB"
+			"TRADE":  return "HUB"
 			
 	if zoneNumber == 3:
 		match (gScenario.myScenarioType):
-			"EXPLORATION":newZone.zoneType = "COMMS"
-			"EXTRACTION":newZone.zoneType = "EQUIP"
-			"MILITARY":newZone.zoneType = "HOSP"
-			"SCIENCE":newZone.zoneType = "HUB"
-			"TOURISM":newZone.zoneType = "SPA"
-			"TRADE":newZone.zoneType = "CARGO"
+			"EXPLORATION":  return "COMMS"
+			"EXTRACTION": return "EQUIP"
+			"MILITARY": return "HOSP"
+			"SCIENCE": return "HUB"
+			"TOURISM": return "SPA"
+			"TRADE": return "CARGO"
 
 	if zoneNumber == 4:
 		match (gScenario.myScenarioType):
-			"EXPLORATION":newZone.zoneType = "HAB"
-			"EXTRACTION":newZone.zoneType = "WKSHP"
-			"MILITARY":newZone.zoneType = "HUB"
-			"SCIENCE":newZone.zoneType = "SENSOR"
-			"TOURISM":newZone.zoneType = "HUB"
-			"TRADE":newZone.zoneType = "HAB"
+			"EXPLORATION": return "HAB"
+			"EXTRACTION": return "WKSHP"
+			"MILITARY": return "HUB"
+			"SCIENCE":  return "SENSOR"
+			"TOURISM": return "HUB"
+			"TRADE": return "HAB"
 
 	if numberOfZones > 3:
-		if zoneNumber == numberOfZones - 1: newZone.zoneType = "BRIDGE"
+		if zoneNumber == numberOfZones - 1: return "BRIDGE"
 
 func setBaseZoneType(newZone, zoneNumber):
-	if zoneNumber == 0: newZone.zoneType = "ENG"
-	if zoneNumber == 2:newZone.zoneType = "HAB"
+	if zoneNumber == 0: return "ENG"
+	if zoneNumber == 2: return "HAB"
 	
 	if zoneNumber == 1:
 		match (gScenario.myScenarioType):
-			"EXPLORATION":newZone.zoneType = "CARGO"
-			"EXTRACTION":newZone.zoneType = "CARGO"
-			"MILITARY":newZone.zoneType = "ARM"
-			"SCIENCE":newZone.zoneType = "LAB"
-			"TOURISM":newZone.zoneType = "HAB"
-			"TRADE":newZone.zoneType = "HUB"
+			"EXPLORATION":return"CARGO"
+			"EXTRACTION":return"CARGO"
+			"MILITARY":return"ARM"
+			"SCIENCE":return"LAB"
+			"TOURISM":return"HAB"
+			"TRADE":return"HUB"
 			
 	if zoneNumber == 3:
 		match (gScenario.myScenarioType):
-			"EXPLORATION":newZone.zoneType = "COMMS"
-			"EXTRACTION":newZone.zoneType = "EQUIP"
-			"MILITARY":newZone.zoneType = "HOSP"
-			"SCIENCE":newZone.zoneType = "HUB"
-			"TOURISM":newZone.zoneType = "SPA"
-			"TRADE":newZone.zoneType = "CARGO"
+			"EXPLORATION":return"COMMS"
+			"EXTRACTION":return"EQUIP"
+			"MILITARY":return"HOSP"
+			"SCIENCE":return"HUB"
+			"TOURISM":return"SPA"
+			"TRADE":return"CARGO"
 
 	if zoneNumber == 4:
 		match (gScenario.myScenarioType):
-			"EXPLORATION":newZone.zoneType = "HAB"
-			"EXTRACTION":newZone.zoneType = "WKSHP"
-			"MILITARY":newZone.zoneType = "HUB"
-			"SCIENCE":newZone.zoneType = "SENSOR"
-			"TOURISM":newZone.zoneType = "HUB"
-			"TRADE":newZone.zoneType = "HAB"
+			"EXPLORATION":return"HAB"
+			"EXTRACTION":return"WKSHP"
+			"MILITARY":return"HUB"
+			"SCIENCE":return"SENSOR"
+			"TOURISM":return"HUB"
+			"TRADE":return"HAB"
 
 	if numberOfZones > 3:
-		if zoneNumber == numberOfZones - 1: newZone.zoneType = "BRIDGE"
+		if zoneNumber == numberOfZones - 1: return "BRIDGE"
 
 func setStationZoneType(newZone, zoneNumber):
-	if zoneNumber == 0: newZone.zoneType = "HAB"
-	#if zoneNumber == 2:newZone.zoneType = "HAB"
+	if zoneNumber == 0: return "ENG"
+	if zoneNumber == 2:"HAB"
 	
 	if zoneNumber == 1:
 		match (gScenario.myScenarioType):
-			"EXPLORATION":newZone.zoneType = "HUB"
-			"EXTRACTION":newZone.zoneType = "DOCK"
-			"MILITARY":newZone.zoneType = "OPS"
-			"SCIENCE":newZone.zoneType = "HUB"
-			"TOURISM":newZone.zoneType = "HAB"
-			"TRADE":newZone.zoneType = "HUB"
+			"EXPLORATION":return "HUB"
+			"EXTRACTION":return "DOCK"
+			"MILITARY":return "OPS"
+			"SCIENCE":return"HUB"
+			"TOURISM":return"HAB"
+			"TRADE":return"HUB"
 	
 	if zoneNumber == 2:
 		match (gScenario.myScenarioType):
-			"EXPLORATION":newZone.zoneType = "SENSOR"
-			"EXTRACTION":newZone.zoneType = "CARGO"
-			"MILITARY":newZone.zoneType = "ARM"
-			"SCIENCE":newZone.zoneType = "LAB"
-			"TOURISM":newZone.zoneType = "HAB"
-			"TRADE":newZone.zoneType = "DOCK"
+			"EXPLORATION":return "SENSOR"
+			"EXTRACTION":return "CARGO"
+			"MILITARY":return "ARM"
+			"SCIENCE":return "LAB"
+			"TOURISM":return "HAB"
+			"TRADE":return  "DOCK"
 		
 	if zoneNumber == 3:
 		match (gScenario.myScenarioType):
-			"EXPLORATION":newZone.zoneType = "COMMS"
-			"EXTRACTION":newZone.zoneType = "EQUIP"
-			"MILITARY":newZone.zoneType = "HOSP"
-			"SCIENCE":newZone.zoneType = "SENSOR"
-			"TOURISM":newZone.zoneType = "SPA"
-			"TRADE":newZone.zoneType = "CARGO"
+			"EXPLORATION":return"COMMS"
+			"EXTRACTION":return"EQUIP"
+			"MILITARY":return"HOSP"
+			"SCIENCE":return"SENSOR"
+			"TOURISM":return"SPA"
+			"TRADE":return"CARGO"
 
 	if zoneNumber == 4:
 		match (gScenario.myScenarioType):
-			"EXPLORATION":newZone.zoneType = "HAB"
-			"EXTRACTION":newZone.zoneType = "WKSHP"
-			"MILITARY":newZone.zoneType = "HUB"
-			"SCIENCE":newZone.zoneType = "REACTOR"
-			"TOURISM":newZone.zoneType = "DOME"
-			"TRADE":newZone.zoneType = "HAB"
+			"EXPLORATION":return"HAB"
+			"EXTRACTION":return"WKSHP"
+			"MILITARY":return"HUB"
+			"SCIENCE":return "REACTOR"
+			"TOURISM":return "DOME"
+			"TRADE":"HAB"
 
 	if numberOfZones > 3:
 		if zoneNumber == numberOfZones - 1: 
 			match (gScenario.myScenarioType):
-				"EXPLORATION":newZone.zoneType = "HAB"
-				"EXTRACTION":newZone.zoneType = "WKSHP"
-				"MILITARY":newZone.zoneType = "SHIELD"
-				"SCIENCE":newZone.zoneType = "REACTOR"
-				"TOURISM":newZone.zoneType = "HUB"
-				"TRADE":newZone.zoneType = "HAB"
+				"EXPLORATION":return"HAB"
+				"EXTRACTION":return"WKSHP"
+				"MILITARY":return "SHIELD"
+				"SCIENCE":return "REACTOR"
+				"TOURISM":return"HUB"
+				"TRADE":return"HAB"
 
 
 

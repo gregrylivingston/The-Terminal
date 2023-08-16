@@ -31,7 +31,7 @@ func addZone(i):
 	var newZone = zoneScene.instantiate()
 	newZone.size_flags_vertical = SIZE_SHRINK_BEGIN
 	newZone.size_flags_horizontal = SIZE_SHRINK_CENTER
-	newZone.zoneTitle = i.zoneType
+	newZone.myZone = i
 	add_child(newZone)
 	return newZone
 
